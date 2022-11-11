@@ -371,80 +371,167 @@ const drinkData = [
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "White Claw",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Lemon Water",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Gingerale",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Arnold Palmer",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Malt Milkshake",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Bloody Mary",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Gin and Tonic",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Margarita",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Vodka Cran",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Martini"
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Dirty Martini",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Grapefruit La Croix",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Pistachio Latte",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name: "Root Beer Float",
     drink_description:
     drink_subject:
 },
 {
-    drink_name:
+    drink_name:  "Mango Dragonfruit Tea",
     drink_description:
     drink_subject:
 },
+{
+    drink_name: "Chocolate Milk",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Aperol Spritz",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Grape Juice",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Shirley Temple",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name:  "Roy Rogers",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Stout",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Jones Soda",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Whiskey Sour",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Flat White",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Macchiato",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Irish Coffee",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Paloma",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Bahama Mama",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Kool-Aid",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Eggnog",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "GrassHopper",
+    drink_description:
+    drink_subject:
+},
+{
+    drink_name: "Sazerac",
+    drink_description:
+    drink_subject:
+}
+
+
 
 
 ]
