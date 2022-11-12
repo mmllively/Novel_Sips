@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Drink, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
+
 router.get('/', async (req, res) => {
   try {
     // get all the drinks with comments
@@ -19,8 +20,8 @@ router.get('/', async (req, res) => {
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      Comment, 
-      logged_in: req.session.logged_in 
+      // Comment, 
+      // logged_in: req.session.logged_in 
     });
 
   } catch (err) {
@@ -28,6 +29,7 @@ router.get('/', async (req, res) => {
   }
 });
 
+//Get drink by ID
 router.get('/drink/:id', async (req, res) => {
   try {
     const drinkData = await Drink.findOne({
