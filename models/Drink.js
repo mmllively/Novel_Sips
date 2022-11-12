@@ -36,7 +36,7 @@ Drink.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Drink',
+    modelName: 'drink',
   }
 );
 

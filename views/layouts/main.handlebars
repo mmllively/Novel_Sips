@@ -4,8 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund My Project!</title>
-  <link rel="stylesheet" href="/css/jass.css">
+  <title>Project 2</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -13,17 +12,30 @@
   <div class="flex-column justify-space-around">
     <header class="display-flex justify-space-between align-center p-2">
       <h1>
-        <span role="img" aria-label="money">💸</span>
-        <a href="/">Novel Sips: Pair a drink with you Favorite Book!</a>
+        <span role="img" aria-label="drink">🍹</span>
+        <a href="/">Novel Sips: Find the perfect pairing for your current read!</a>
       </h1>
       <nav>
+        <ul>
         <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
+         {{#if logged_in}}
+       
+        <button><a href="/profile">My Book Shelf</a> </button> 
+
         <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
+       
+         <!-- logout link here -->
+          {{else}}
+       
+          <button><a href="/login">Log In / Sign Up</a></button>
+       
         {{/if}}
+
+        
+
+        
+       
+        </ul>
       </nav>
     </header>
     <main class="container container-fluid mt-5">
