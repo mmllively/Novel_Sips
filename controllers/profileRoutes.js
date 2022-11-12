@@ -6,22 +6,24 @@ const { Drink, Comment, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 //get all drinks they selected
-router.get('/', withAuth, async (req, res) => {
-    try {
-      const postData = await Drink.findAll({
-        where: {
-        user_id: req.session.user_id
-      },
-      include: [{model: User}]
-    });
+router.get('/shelf', async (req, res) => {
+  try {
+    const allDrinks = await Drink.findAll ({
+      attributes: ["name", "description", "subject"]
+})
 
-    const posts = postData.map((post) => post.get({plain: true}));
-    res.render("profile",{posts, logged_in: req.session.logged_in });
+res.status(200).json(allDrinks);
 
 } catch (err) {
-  res.status(400).json(err);
+console.info(err);
+res.status(500).json(err);
 }
-});
+})
+
+    // const posts = postData.map((post) => post.get({plain: true}));
+    // res.render("profile",{posts, logged_in: req.session.logged_in });
+
+
 
 
 
