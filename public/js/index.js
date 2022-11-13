@@ -1,7 +1,7 @@
 // API URLS
 
-function getbooks(){
-    document.getElementById('output').innerHTML="";
+function getBooks(){
+    searchBtn = document.getElementById('output').innerHTML="";
     
     fetch("http://openlibrary.org/search.json?q=" +document.getElementById("input").value)
     .then(a=>a.json())
@@ -13,5 +13,5 @@ function getbooks(){
     });
 }
 
-
+document.getElementById("searchBtn").addEventListener("click", getBooks);
 
