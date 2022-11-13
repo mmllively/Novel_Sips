@@ -337,47 +337,47 @@ const drinkData = [
 },
 {
     drink_name: "Capri Sun",
-    drink_description:
-    drink_subject:
+    drink_description: "A sweet drink with questionable flavors. Tastes like a mix of soccer practice and warm summer nights. Please don't play with the pouch.",
+    drink_subject: "childrens"
 },
 {
     drink_name: "Iced Coffee",
-    drink_description:
+    drink_description: "When you just wish your coffee wasn't hot today.",
     drink_subject:
 },
 {
     drink_name: "Moscow Mule",
-    drink_description:
+    drink_description: "This classic cocktail is a mix of vodka, ginger beer, and lime juice. Mixed to perfection, reading never felt so refreshing.",
     drink_subject:
 },
 {
     drink_name: "Cola",
-    drink_description:
+    drink_description: "The most classic drink of the all.",
     drink_subject:
 },
 {
     drink_name: "Milk",
-    drink_description:
-    drink_subject:
+    drink_description: "Sometimes we don't need anything more than a tall glass of milk. Cookies anyone?",
+    drink_subject: "childrens"
 },
 {
-    drink_name: "Iced Tea",
-    drink_description:
+    drink_name: "Sweet Tea",
+    drink_description: "A southern classic. You won't actually believe how much sugar is in this tea. The rest of the world just wouldn't understand, y'all.",
     drink_subject:
 },
 {
     drink_name: "Spiked Iced Tea",
-    drink_description:
+    drink_description: "While sipping on a nice iced cold black tea is perfect for the morning, we need to change it up a bit once 5 o'clock hits.",
     drink_subject:
 },
 {
     drink_name: "White Claw",
-    drink_description:
+    drink_description: "The alcoholic seltzer that took the world by storm. Comes in a variety of flavors. Did you know that there are no laws when you are drinking white claws? Read responsibly.",
     drink_subject:
 },
 {
     drink_name: "Lemon Water",
-    drink_description:
+    drink_description: "Antioxidants are very important and plain water just doesn't always hit the mark.",
     drink_subject:
 },
 {
