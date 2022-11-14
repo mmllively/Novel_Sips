@@ -46,7 +46,7 @@ header {
   width: 50%;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
-  padding-top: 10px;
+  padding-top: 18px;
   color: #dfdad2;
   text-align: center;
 }
@@ -133,12 +133,21 @@ header {
   border: none;
 }
 
-/* input placement for get books search*/
+/* input placement for get books search */
 .inputplacement {
-  padding-top: 10px;
+  padding-top: 18px;
   margin-left: 10%;
   width: 50%;
   /* padding-bottom: 20px; */
+}
+
+/* output of books from search */
+.output {
+  padding-top: 18px;
+  font-size: 20px;
+  text-align: center;
+  color: #d1bea3;
+  width: 50%;
 }
 
 /* email & password login pg form */
