@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Novel Sips</title>
   <link rel="stylesheet" href="./css/style.css">
   {{!-- google fonts stylesheet --}}
@@ -37,13 +38,9 @@
         <!-- logout link here -->
         {{else}}
 
-        {{!-- log in button --}}
-        <div class="loginbutton">
+        {{!-- log in and sign up button --}}
+        <div class="loginsignupbutton">
           <button class="login"><a href="/login">Log In</a></button>
-        </div>
-
-        {{!-- sign up button --}}
-        <div class="signupbutton">
           <button class="signup"><a href="/signup">Sign Up</a></button>
         </div>
 
@@ -63,14 +60,10 @@
   <footer>
 
   </footer>
-
-  </div>
-
-  <!-- Render script for logged in users only -->
-  {{#if logged_in}}
-  <script src="/logout"></script>
-  {{/if}}
-
+<script src="/js/logout.js"></script>
+<script src="/js/login.js"></script>
 </body>
 
 </html>
+
+
