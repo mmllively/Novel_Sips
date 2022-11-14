@@ -382,152 +382,152 @@ const drinkData = [
 },
 {
     drink_name: "Gingerale",
-    drink_description:
+    drink_description: "A classic mixer. Oh, wait, are you drinking this by itself?",
     drink_subject:
 },
 {
     drink_name: "Arnold Palmer",
-    drink_description:
+    drink_description: "Half lemonade and half iced black tea, nothing could be better on a warm summer day. Named after a famous golfer.",
     drink_subject:
 },
 {
     drink_name: "Malt Milkshake",
-    drink_description:
+    drink_description: "Pick any flavor you want, you literally cannot go wrong with a malted milkshake. Just don't get any ice cream on the page!",
     drink_subject:
 },
 {
     drink_name: "Bloody Mary",
-    drink_description:
-    drink_subject:
+    drink_description: "Ready for a spicy thrill? Mr. Mustard did it with a knife in the parlor!",
+    drink_subject: "mystery"
 },
 {
     drink_name: "Gin and Tonic",
-    drink_description:
+    drink_description: "You know exactly what is on your mind and you will write it all down in the bar, mysteriously.",
     drink_subject:
 },
 {
     drink_name: "Margarita",
-    drink_description:
+    drink_description: "You are quite the partier. This drink involves tequila, lime juice, agave syrup, and whatever mixture you think fits the mood the best. Salt the rim and get ready for a fun beach read.",
     drink_subject:
 },
 {
     drink_name: "Vodka Cran",
-    drink_description:
+    drink_description: "Vodka and cranberry juice. This is truly a simple and go to cocktail for a night hitting the books.",
     drink_subject:
 },
 {
     drink_name: "Martini"
-    drink_description:
+    drink_description: "Shaken or stirred? James Bond would know best."
     drink_subject:
 },
 {
     drink_name: "Dirty Martini",
-    drink_description:
+    drink_description: "Attention all olive lovers! This classic cocktail adds a bit of extra olive juice to make a tangier drink.",
     drink_subject:
 },
 {
     drink_name: "Grapefruit La Croix",
-    drink_description:
+    drink_description: "A flavor of champions. Also called Pampelmousse for those who are a bit more fancy. Some say they can't taste the flavors, but life doesn't always need to be so sweet.",
     drink_subject:
 },
 {
     drink_name: "Pistachio Latte",
-    drink_description:
-    drink_subject:
+    drink_description: "This sounds like an interesting flavor and it is, but wow is it delicious... and green.",
+    drink_subject: "science fiction"
 },
 {
     drink_name: "Root Beer Float",
-    drink_description:
-    drink_subject:
+    drink_description: "Why would anyone ever want to drink root beer alone when you can ADD ICE CREAM!!!??"
+    drink_subject: "Young Adult"
 },
 {
     drink_name:  "Mango Dragonfruit Tea",
-    drink_description:
-    drink_subject:
+    drink_description: "Coffee, not for us, but a refresher from everyone's favorite coffee shop? Need it.",
+    drink_subject: "Young Adult"
 },
 {
     drink_name: "Chocolate Milk",
-    drink_description:
-    drink_subject:
+    drink_description: "There is nothing better than a carton of chocolate milk on a wednesday afternoon reading your favorite Junie B. Jones.",
+    drink_subject: "childrens"
 },
 {
     drink_name: "Aperol Spritz",
-    drink_description:
-    drink_subject:
+    drink_description: "All the rage and worth it all. You are new and trendy and on top of all the trends.",
+    drink_subject: "health"
 },
 {
     drink_name: "Grape Juice",
-    drink_description:
-    drink_subject:
+    drink_description: "Very sweet and the most sophisticated of drinks for children. Also stains everything.",
+    drink_subject: "childrens"
 },
 {
     drink_name: "Shirley Temple",
-    drink_description:
+    drink_description: "A Shirley Temple is truly the best mocktail of all time. Don't believe us? That's fine. But in your heart of hearts, you know it's true. Lemon-Lime soda with Cherry.",
     drink_subject:
 },
 {
     drink_name:  "Roy Rogers",
-    drink_description:
+    drink_description: "Shirley Temple not your thing? Cherry coke is much manlier, you're right.",
     drink_subject:
 },
 {
     drink_name: "Stout",
-    drink_description:
-    drink_subject:
+    drink_description: "This dark, top-fermented beer is an old classic in the world of beer making. Perfect for reading your favorite WWII tank novel.",
+    drink_subject: "history"
 },
 {
     drink_name: "Jones Soda",
-    drink_description:
-    drink_subject:
+    drink_description: "If you can think of a flavor, Jones Soda is sure to have it. A whole Thanksgiving dinner? Your favorite savory food? They've got it. Drinks of the future.",
+    drink_subject: "science fiction"
 },
 {
     drink_name: "Whiskey Sour",
-    drink_description:
+    drink_description: "Sweet and sour, just like the characters of your favorite novel.",
     drink_subject:
 },
 {
     drink_name: "Flat White",
-    drink_description:
+    drink_description: "G'day mate! Aussie's invtented this microfoamed short latte. Less foam, more coffe flavor, delicious all around.",
     drink_subject:
 },
 {
     drink_name: "Macchiato",
-    drink_description:
+    drink_description: "Macchiato means stain in Italian. This drink is 3oz with just a stain of espresso or stain of foam, depending on your region. You are truly are a coffee fan.",
     drink_subject:
 },
 {
     drink_name: "Irish Coffee",
-    drink_description:
+    drink_description: "We all love coffee here, but the Irish just know how to do it better when the sun goes down. Pour some irish whiskey in your coffee and tell us how it is.",
     drink_subject:
 },
 {
     drink_name: "Paloma",
-    drink_description:
+    drink_description: "Tequila! Grab your favorite tropical soda, some lime, and tequila and get to reading!",
     drink_subject:
 },
 {
     drink_name: "Bahama Mama",
-    drink_description:
+    drink_description: "If you are ready for a sweet, chill day at the beach, it's time to have a Bahama Mama. This drink include rum orange and pineapple juice, frozen and blended. Serve with an umbrella!",
     drink_subject:
 },
 {
     drink_name: "Kool-Aid",
-    drink_description:
+    drink_description: "Oh YEAH!! Kool-aid in hand, book in the other. Ahhh the life.",
     drink_subject:
 },
 {
     drink_name: "Eggnog",
-    drink_description:
+    drink_description: "It doesn't just have to be the holidays to celebrate with eggnog. This drink is made with milk, cream, sugar, egg yolks, and whipped egg whites.",
     drink_subject:
 },
 {
     drink_name: "GrassHopper",
-    drink_description:
+    drink_description: "Created in New Orleans, this drink is made with creme de menthe, creme de cacao, and french cream.",
     drink_subject:
 },
 {
     drink_name: "Sazerac",
-    drink_description:
+    drink_description: "You sure do love your spirits. Absinthe, bitters, rye whiskey, cognac, with some lemon to garnish. Ahhh"
     drink_subject:
 }
 
