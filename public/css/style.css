@@ -178,3 +178,7 @@ header {
   width: 250px;
   border: none;
 }
+
+.bookBtn:hover {
+  transform: scale(.75);
+}

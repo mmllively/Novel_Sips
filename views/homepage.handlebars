@@ -1,3 +1,4 @@
+
 {{!-- Search for a book --}}
 
 <div>
@@ -15,12 +16,21 @@
   </p>
 
   {{!-- get books search input and button --}}
-  <div class="inputplacement">
+  <div class="inputplacement" align="center">
     <input class="getbooksinput" id="input" placeholder="Search for a title...">
     <button class="getbooks" id="searchBtn">Get Books</button>
-    <div class="output" id="output"></div>
+
+    {{!-- create a container for books output --}}
+    {{!-- create cards for each individual book --}}
+    <card class="booksoutput">
+      <div class="output" id="output"></div>
+    </card>
+
   </div>
 
 </div>
 
 <script src="/js/index.js"></script>
+
+
+
