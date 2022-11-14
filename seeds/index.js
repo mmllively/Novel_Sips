@@ -1,5 +1,5 @@
 const seedComment = require('./comment-seeds');
-const seedDrink = require('./drink-seeds');
+const seedDrink = require('./drink-seed');
 const seedUser = require('./user-seeds');
 
 
