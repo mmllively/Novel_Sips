@@ -23,8 +23,8 @@ router.get('/', async (req, res) => {
 
     //This line is rendering the homepageroutes.hbs
     res.render('homepage', {
-      // Comment, 
-      // logged_in: req.session.logged_in 
+      Comment, 
+      logged_in: req.session.logged_in 
     });
 
 
@@ -144,6 +144,16 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
+
+
+
+router.get('/profile', (req, res) =>{
+  
+  res.render('profile', {
+    logged_in: req.session.logged_in 
+  });
+ 
+})
 
 
 module.exports = router;

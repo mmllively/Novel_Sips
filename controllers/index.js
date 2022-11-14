@@ -9,7 +9,6 @@ router.use('/', homeRoutes);
 router.use('/profile', profileRoutes)
 
 
-router.use('/', homeRoutes);
 
 router.use('/api', apiRoutes);
 
