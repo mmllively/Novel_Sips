@@ -25,21 +25,11 @@ Comment.init(
       }
     },
     drink_id: {
-
-        model: "User"
-      }
-    },
-    post_id: {
-
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         key: "id",
-
         model: "drink"
-
-        model: "Post"
-
       }
     }
   },
