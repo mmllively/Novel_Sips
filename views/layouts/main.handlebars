@@ -33,15 +33,13 @@
 
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-        <div class="bookshelf-logoutbtn">
-          {{!-- bookshelf button --}}
-          <button class="bookshelf">
-            <a href="/profile">My Book Shelf</a>
-          </button>
 
-          {{!-- Logout button --}}
+        {{!-- bookshelf and logout button --}}
+        <div class="bookshelf-logoutbtn">
+          <button class="bookshelf"><a href="/profile">My Book Shelf</a></button>
           <button class="no-button" id="logout">Log Out</button>
         </div>
+
         <!-- logout link here -->
         {{else}}
 
