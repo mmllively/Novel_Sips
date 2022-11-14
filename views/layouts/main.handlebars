@@ -4,51 +4,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project 2</title>
-  {{!-- <link rel="stylesheet" href=" "> --}}
+  <title>Novel Sips</title>
+  <link rel="stylesheet" href="./css/style.css">
+  {{!-- google fonts stylesheet --}}
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
+  {{!-- font awesome stylesheet --}}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-  <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <span role="img" aria-label="drink">🍹</span>
-        <a href="/">Novel Sips: Find the perfect pairing for your current read!</a>
-      </h1>
-      <nav>
-        <ul>
-          {{home}}
-        <!-- Conditionally render login or logout links -->
-         {{#if logged_in}}
-       
-        <button><a href="/profile">My Book Shelf</a> </button> 
+  {{!-- header --}}
+  <header>
+    <h1 class="pgtitle">Novel Sips
+      <i class="fa fa-coffee" style="font-size:36px"></i>
+    </h1>
 
-        <button class="no-button" id="logout">logout</button>
-       
-         <!-- logout link here -->
-          {{else}}
-       
-          <button><a href="/login">Log In</a></button>
-          <button><a href="/signup">Sign Up</a></button>
-       
+    {{!-- nav bar --}}
+    <nav>
+      <ul>
+
+        <!-- Conditionally render login or logout links -->
+        {{#if logged_in}}
+
+        {{!-- bookshelf button --}}
+        <button class="bookshelf">
+          <a href="/profile">My Book Shelf</a>
+        </button>
+
+        {{!-- Logout button --}}
+        <button class="no-button" id="logout">Log Out</button>
+
+        <!-- logout link here -->
+        {{else}}
+
+        {{!-- log in and sign up button --}}
+        <div class="loginsignupbutton">
+          <button class="login"><a href="/login">Log In</a></button>
+          <button class="signup"><a href="/signup">Sign Up</a></button>
+        </div>
+
         {{/if}}
 
-        
+      </ul>
+    </nav>
 
-        
-       
-        </ul>
-      </nav>
-    </header>
-    <main class="container container-fluid mt-5">
-      <!-- Render the sub layout -->
-      {{{ body }}}
-    </main>
-    <footer>
-      
-    </footer>
+  </header>
+
+  <main>
+    <!-- Render the sub layout -->
+    {{{ body }}}
+  </main>
+
+  {{!-- footer --}}
+  <footer>
+
+  </footer>
+
   </div>
-  
+
   <!-- Render script for logged in users only -->
   {{#if logged_in}}
   <script src="/logout"></script>
