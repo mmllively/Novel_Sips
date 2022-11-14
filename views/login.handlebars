@@ -12,16 +12,17 @@
     {{!-- Email & password login form --}}
     <form class="form-login-form" align="center">
 
-      <div class="form-group">
-        <label for="email-login" class="emailtitle">Email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
+      {{!-- email label --}}
+      <div class="form-group"><label for="email-login" class="emailtitle">Email:</label></div>
+      {{!-- email input --}}
+      <div class="form-group"><input class="form-input" type="text" id="email-login" /></div>
 
-      <div class="form-group">
-        <label for="password-login" class="passwordtitle">Password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
+      {{!-- password label --}}
+      <div class="form-group"><label for="password-login" class="passwordtitle">Password:</label></div>
+      {{!-- password input --}}
+      <div class="form-group"><input class="form-input" type="password" id="password-login" /></div>
 
+      {{!-- submit button --}}
       <div class="form-group">
         <button class="loginbtn" type="submit">Submit</button>
       </div>

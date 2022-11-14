@@ -61,16 +61,10 @@ header {
   /* border-bottom: 1px solid #d1bea3; */
 }
 
-/* log in button placement on navbar */
-.loginbutton {
+/* log in + sign up button placement on nav bar */
+.loginsignupbutton {
   margin-top: -35px;
-  margin-left: 88.5%;
-}
-
-/* sign up button placement on nav bar */
-.signupbutton {
-  margin-top: -31px;
-  margin-left: 93.5%;
+  margin-left: 89.5%;
 }
 
 /* bookshelf button placement on navbar when signed in */
@@ -137,18 +131,23 @@ header {
 /* input placement for get books search */
 .inputplacement {
   padding-top: 18px;
-  margin-left: 10%;
   width: 50%;
-  /* padding-bottom: 20px; */
 }
 
-/* output of books from search */
+/* output of books results from search */
 .output {
   padding-top: 18px;
   font-size: 20px;
   text-align: center;
   color: #d1bea3;
   width: 50%;
+}
+
+/* create a container for books output */
+/* create cards for each individual book */
+/* where the book search results show */
+.booksoutput {
+  height: 300px;
 }
 
 /* email & password login pg form */
@@ -159,7 +158,7 @@ header {
 
 /* input form group on login pg */
 .form-group {
-  padding-bottom: 10px;
+  padding-top: 8px;
   width: 50%;
 }
 
