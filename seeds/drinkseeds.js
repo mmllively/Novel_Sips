@@ -437,7 +437,7 @@ const drinkData = [
 },
 {
     drink_name: "Root Beer Float",
-    drink_description: "Why would anyone ever want to drink root beer alone when you can ADD ICE CREAM!!!??"
+    drink_description: "Why would anyone ever want to drink root beer alone when you can ADD ICE CREAM!!!??",
     drink_subject: "Young Adult"
 },
 {
@@ -531,7 +531,8 @@ const drinkData = [
     drink_subject: "else"
 }
 
-
-
-
 ]
+
+const seedDrink = () => Drink.bulkCreate(drinkData);
+
+module.exports = seedDrink;
