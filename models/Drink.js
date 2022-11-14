@@ -11,14 +11,22 @@ Drink.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     name: {
+
+    title: {
+
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
     },
+
     subject: {
+
+    genre: {
+
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: DataTypes.NOW,
@@ -36,7 +44,11 @@ Drink.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+
     modelName: 'drink',
+
+    modelName: 'Drink',
+
   }
 );
 
