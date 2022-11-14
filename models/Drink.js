@@ -13,24 +13,20 @@ Drink.init(
     },
 
     name: {
-
-    title: {
-
       type: DataTypes.STRING,
       allowNull: false,
     },
+      
     description: {
       type: DataTypes.STRING,
     },
 
     subject: {
-
-    genre: {
-
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+      
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -44,10 +40,7 @@ Drink.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-
     modelName: 'drink',
-
-    modelName: 'Drink',
 
   }
 );
