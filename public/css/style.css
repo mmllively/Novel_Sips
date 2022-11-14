@@ -8,6 +8,7 @@ body {
   font-family: 'Dancing Script';
 }
 
+/* novel sips title in nav bar */
 .pgtitle {
   padding-left: 10px;
   padding-top: 10px;
@@ -23,7 +24,8 @@ header {
 
 .subtitle,
 .logintitle,
-.signuptitle {
+.signuptitle,
+.profilepgtitle {
   margin-top: -600px;
   color: #d1bea3;
   font-size: 32px;
