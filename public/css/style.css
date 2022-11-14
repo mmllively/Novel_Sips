@@ -136,9 +136,7 @@ header {
 /* input placement for get books search */
 .inputplacement {
   padding-top: 18px;
-  margin-left: 10%;
   width: 50%;
-  /* padding-bottom: 20px; */
 }
 
 /* output of books from search */
