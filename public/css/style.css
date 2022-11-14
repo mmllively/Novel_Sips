@@ -55,9 +55,17 @@ header {
   /* border-bottom: 1px solid #d1bea3; */
 }
 
-/* log in/sign up button placement */
+/* log in button placement */
 .loginbutton {
+  margin-top: -35px;
+  margin-left: 85%;
+}
+
+/* sign up button placement */
+
+.signupbutton {
   margin-top: -30px;
+  margin-left: 90%;
 }
 
 /* bookshelf button placement */
@@ -74,12 +82,12 @@ header {
   margin-right: 20px;
 }
 
-/* log in/sign up + bookshelf + log out button styling */
+/* button styling */
 .login,
+.signup,
 .bookshelf,
+.getbooks,
 #logout {
-  margin-left: 85%;
-  margin-top: -40px;
   background-color: rgb(222, 94, 47);
   color: #dfdad2;
   font-size: 14px;
@@ -88,21 +96,42 @@ header {
   border: 1px solid #dfdad2;
 }
 
+/* button styling link */
 .login a,
+.signup a,
 .bookshelf a,
 #logout a {
   color: #dfdad2;
   text-decoration: none;
 }
 
+/* button styling hover */
 .login a:hover,
+.signup a:hover,
 .bookshelf a:hover,
+.getbooks:hover,
 #logout a:hover {
+  cursor: pointer;
   color: #dfdad2;
   text-decoration: none;
   font-weight: bold;
 }
 
+/* input styling */
+.getbooksinput {
+  width: 250px;
+  padding: 7px 7px;
+  border-radius: 5px;
+  border: none;
+}
+
+/* input placement */
+.inputplacement {
+  padding-top: 10px;
+  margin-left: 10%;
+  width: 50%;
+  /* padding-bottom: 20px; */
+}
 
 /* header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
