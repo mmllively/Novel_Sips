@@ -1,3 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #a2704f;
+  font-family: 'Dancing Script';
+}
+
+.pgtitle {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 38px;
+}
+
+header {
+  background-color: #5f351b;
+  color: #d1bea3;
+  padding-bottom: 16px;
+  border-bottom: solid 3px #d1bea3;
+}
+
+.subtitle {
+  margin-top: -600px;
+  font-size: 32px;
+  width: 50%;
+  text-align: center;
+}
+
+.subtitle a {
+  color: #d1bea3;
+  text-decoration: none;
+}
+
+.subtitle a:hover {
+  color: rgb(222, 94, 47);
+}
+
+.subtitle-p {
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding-top: 10px;
+  color: #dfdad2;
+  text-align: center;
+}
+
+.heroimg {
+  height: 620px;
+  width: 50%;
+  object-fit: fit;
+  margin-left: 50%;
+  /* border-left: 1px solid #d1bea3; */
+  /* border-bottom: 1px solid #d1bea3; */
+}
+
+/* log in/sign up button placement */
+.loginbutton {
+  margin-top: -30px;
+}
+
+/* bookshelf button placement */
+.bookshelf {
+  margin-top: -30px;
+  /* margin right placement needs to be checked once page is functional  */
+  margin-right: 30px;
+}
+
+/* log out button placement */
+#logout {
+  margin-top: -30px;
+  /* margin right placement needs to be checked once page is functional  */
+  margin-right: 20px;
+}
+
+/* log in/sign up + bookshelf + log out button styling */
+.login,
+.bookshelf,
+#logout {
+  margin-left: 85%;
+  margin-top: -40px;
+  background-color: rgb(222, 94, 47);
+  color: #dfdad2;
+  font-size: 14px;
+  border-radius: 10px 10px;
+  padding: 7px 7px;
+  border: 1px solid #dfdad2;
+}
+
+.login a,
+.bookshelf a,
+#logout a {
+  color: #dfdad2;
+  text-decoration: none;
+}
+
+.login a:hover,
+.bookshelf a:hover,
+#logout a:hover {
+  color: #dfdad2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
 /* header, .project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
