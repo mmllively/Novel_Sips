@@ -1,10 +1,12 @@
 //Note: this page is all wrong
 
 const router = require('express').Router();
-const { Project } = require('../../models');
+
+const { Drink } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
+router.post('/drinks', withAuth, async (req, res) => {
+
   try {
     const newProject = await Project.create({
       ...req.body,
