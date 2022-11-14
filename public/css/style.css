@@ -22,7 +22,8 @@ header {
 }
 
 .subtitle,
-.logintitle {
+.logintitle,
+.signuptitle {
   margin-top: -600px;
   color: #d1bea3;
   font-size: 32px;
@@ -60,23 +61,23 @@ header {
 /* log in button placement on navbar */
 .loginbutton {
   margin-top: -35px;
-  margin-left: 85%;
+  margin-left: 88.5%;
 }
 
 /* sign up button placement on nav bar */
 .signupbutton {
   margin-top: -31px;
-  margin-left: 90%;
+  margin-left: 93.5%;
 }
 
-/* bookshelf button placement */
+/* bookshelf button placement on navbar when signed in */
 .bookshelf {
   margin-top: -30px;
   /* margin right placement needs to be checked once page is functional  */
   margin-right: 30px;
 }
 
-/* log out button placement */
+/* log out button placement on navbar when signed in */
 #logout {
   margin-top: -30px;
   /* margin right placement needs to be checked once page is functional  */
@@ -89,6 +90,7 @@ header {
 .bookshelf,
 .getbooks,
 .loginbtn,
+.signupbtn,
 #logout {
   background-color: rgb(222, 94, 47);
   color: #dfdad2;
@@ -113,6 +115,7 @@ header {
 .bookshelf a:hover,
 .getbooks:hover,
 .loginbtn:hover,
+.signupbtn:hover,
 #logout a:hover {
   cursor: pointer;
   color: #dfdad2;
@@ -137,7 +140,8 @@ header {
 }
 
 /* email & password login pg form */
-.form-login-form {
+.form-login-form,
+.form-signup-form {
   padding-top: 10px;
 }
 
@@ -149,7 +153,8 @@ header {
 
 /* label for email and password on login pg */
 .emailtitle,
-.passwordtitle {
+.passwordtitle,
+.usernametitle {
   font-size: 18px;
   color: #dfdad2;
   font-family: Arial, Helvetica, sans-serif;
