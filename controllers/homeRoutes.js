@@ -7,7 +7,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // get all the drinks with comments
-    const projectData = await Drink.findAll({
+    const drinkData = await Drink.findAll({
 
       include: [
         {
@@ -18,12 +18,12 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const drinks = drinkData.map((drink) => drink.get({ plain: true }));
 
 
     //This line is rendering the homepageroutes.hbs
     res.render('homepage', {
-      Comment, 
+      drinks, 
       logged_in: req.session.logged_in 
     });
 
@@ -106,10 +106,7 @@ router.get('/login', (req, res) => {
     return;
   }
 
-  // if (req.session.logged_in) {
-  //   res.redirect('/profile');
-  //   return;
-  // }
+ 
 
 
   res.render('login');
