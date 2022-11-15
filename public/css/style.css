@@ -255,11 +255,49 @@ header,
 
 /* title styling for our names */
 .nametitle {
-  padding-top: 20px;
+  padding-top: 40px;
   color: #5f351b;
-  font-size: 26px;
+  font-size: 28px;
+  font-weight: bold;
   text-align: center;
 }
 
 /* profile pics in our about us section */
-.profilepic {}
+.profilepic {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 60px 60px;
+  height: 120px;
+  width: 120px;
+}
+
+/* paragraph with out about info */
+.aboutinfo {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+  padding: 15px 15px;
+  color: #dfdad2;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #5f351b;
+  padding-bottom: 20px;
+  border: 2px solid #d1bea3;
+}
+
+/* links to contact us in our about us section */
+.contactlinks {
+  text-decoration: none;
+  color: #d1bea3;
+  font-family: dancing script;
+  font-size: 20px;
+}
+
+.contactlinks:hover {
+  color: #dfdad2;
+}
+
+.aboutuscontainer {
+  padding-bottom: 40px;
+}
