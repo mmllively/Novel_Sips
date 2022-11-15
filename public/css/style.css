@@ -19,6 +19,7 @@ body {
 /* hover effect for novel sips title in nav bar */
 .pgtitle:hover {
   color: #dfdad2;
+  text-decoration: none;
 }
 
 /* positioning for novel sips title in nav bar */
@@ -108,7 +109,6 @@ li a:hover {
 
 /* log in + sign up button placement on nav bar when signed out */
 /* bookshelf + logout button placement on navbar when signed in */
-
 .loginsignupbutton,
 .bookshelf-logoutbtn {
   margin-top: -35px;
@@ -128,6 +128,7 @@ li a:hover {
   background-color: rgb(222, 94, 47);
   color: #dfdad2;
   font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px 10px;
   padding: 7px 7px;
   border: 1px solid #dfdad2;
@@ -391,23 +392,32 @@ header,
 
 /* beginning of drinks page styling */
 
-.drinkscontainer {
-  padding-top: 100px;
-  background-color: #a2704f;
+/* container on the left with title and search */
+.drinksearchcontainer {
+  width: 40%;
 }
 
+
 .drinkstitle {
-  padding-top: 25px;
+  padding-top: 70px;
   font-family: dancing script;
   color: #5f351b;
   font-size: 36px;
-  text-align: center;
+  width: 60%;
+  text-align: right;
 }
 
+/* container that contains carousel */
+.drinkscontainer {
+  padding-top: -10px;
+  background-color: #a2704f;
+}
+
+/* container with the carousel */
 .carouselcontainer {
   width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
+  margin-left: 38%;
+  /* margin-right: 20%; */
   padding-bottom: 40px;
 }
 
@@ -418,13 +428,21 @@ header,
 }
 
 /* drink title in carousel */
-.carouseldrinktitle {}
+.carouseldrinktitle {
+  font-family: dancing script;
+  font-size: 26px;
+}
 
 /* caption under carousel img */
 .carousel-caption {
   font-size: 12px;
+  font-family: arial;
   margin-left: -20%;
   margin-right: -20%;
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
+}
+
+.sr-only {
+  color: black;
 }

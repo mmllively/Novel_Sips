@@ -1,0 +1,27 @@
+header {
+    height: 62px;
+}
+
+.pgtitle {
+    font-weight: bold;
+}
+
+/* positioning for nav bar links */
+.navbarlinks {
+    margin-top: -50px;
+}
+
+.navbarlinks li a {
+    text-decoration: none;
+}
+
+/* button styling */
+/* .login,
+.signup {
+    height: 35px;
+    text-align: center;
+} */
+
+.footerp {
+    padding-bottom: 3px;
+}
