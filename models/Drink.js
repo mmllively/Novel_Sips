@@ -11,18 +11,22 @@ Drink.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+      
     description: {
       type: DataTypes.STRING,
     },
+
     subject: {
       type: DataTypes.STRING,
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+      
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -37,6 +41,7 @@ Drink.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'drink',
+
   }
 );
 
