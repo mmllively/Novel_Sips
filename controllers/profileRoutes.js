@@ -67,11 +67,10 @@ router.delete('/:id', withAuth, async (req, res) => {
         user_id: req.session.user_id
       }
     });
-  }  catch (err) {
-    console.log(err);
+  } catch (err) {
     res.status(500).json(err);
   }
-})
+});
 
 //Get Drinks by ID
 router.get('/:id', async (req, res) => {
