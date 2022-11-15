@@ -1,17 +1,27 @@
-// API URLS
 
-function getBooks(){
-    searchBtn = document.getElementById('output').innerHTML="";
+
+
+// GET books
+function getBooks() {
     
-    fetch("http://openlibrary.org/search.json?q=" +document.getElementById("input").value)
-    .then(a=>a.json())
-    .then(response =>{
-        for (let i = 0; i < 10; i++) {
-            document.getElementById("output").innerHTML+= "<h2>"+response.docs[i].title+"</h2>"+response.docs[i].author_name[0]+"<br><img src = 'http://covers.openlibrary.org/b/isbn/" +response.docs[i].isbn[0]+"-M.jpg'><br>";     
+    searchBtn = document.getElementById('output').innerHTML="";
+    var inputBook = document.getElementById("input").value;
+    axios({
+        method: 'get',
+        url: ('https://www.googleapis.com/books/v1/volumes?q=' + inputBook),
+        data: {
+            title: '',
+            authors: '',
         }
-      
-    });
-}
+    })
+    .then(response => showBooks(response)) 
+    .catch(err => console.error(err))
+};
 
+function showBooks(data){
+document.getElementById("output").innerHTML = `<h2> ${(data.title)} ${(data.authors)}</h2>
+<br>
+<img src = 'http://books.google.com/books/content?id=" + ${(data.id)} +"&printsec=frontcover&img=1&zoom=1&source=gbs_api"><br>`
+};
 document.getElementById("searchBtn").addEventListener("click", getBooks);
-
+//show output
