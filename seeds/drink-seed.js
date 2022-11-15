@@ -129,19 +129,19 @@ const drinkData = [
        name: "Cream Soda",
         description: "Despite the name, cream soda does not have any dairy in it. It is, however, aboslutely delicious full of vanilla sugar and carbonation.",
         subject: "horror",
-        filename: ""
+        filename: "creamsoda.jpg"
 }, 
 {
        name: "White Mocha",
         description: "Some peope like dark chocolate, some like milk chocolate, but white chocolate is often forgotten and it really shouldn't be... at least with coffee!",
         subject: "romance",
-        filename: ""
+        filename: "whitemocha.jpg"
 }, 
 {
        name: "Honey and Vanilla Latte",
         description: "Sweet vanilla and a bee's special honey, this creamy latte warms even the cruelest of hearts.",
         subject: "else",
-        filename: ""
+        filename: "lavender.jpg"
 }, 
 {
        name: "Coconut Mocha Latte",
