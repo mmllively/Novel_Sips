@@ -2,7 +2,7 @@
 //Shows user saved drinks with books
 
 const router = require('express').Router();
-const { Drink, Comment, User } = require('../models');
+const { Drink, Comment, User, Book } = require('../models');
 // const withAuth = require('../utils/auth');
 
 //get all drinks they selected
