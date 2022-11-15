@@ -9,20 +9,25 @@
 
 <div>
   <div>
-    <h3>Favorite Books and Drinks</h3>
+    <h3 class="favesectiontitle">Favorite Books and Drinks</h3>
 
     <form class="form new-project-form">
-      <div class="form-group">
-        <label for="post-name">Title:</label>
-        <input class="form-input" type="text" id="post-name" name="post-name" />
+
+      <div class="form-group" align="center">
+        {{!-- fave book title input field --}}
+        <div class="faveinputtitle"><label class="favebookname" for="post-name">Book Title:</label></div>
+        <div><input class="form-input" type="text" id="post-name" name="post-name" /></div>
       </div>
-      <div class="form-group">
-        <label for="project-desc">Drink:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
+
+      <div class="form-group" align="center">
+        <div class="faveinputtitle"><label class="favedrinkname" for="project-desc">Drink Name:</label></div>
+        <div><textarea class="form-input" id="project-desc" name="project-desc"></textarea></div>
       </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Create</button>
+
+      <div class="form-group" align="center">
+        <button type="submit" class="favoritebtn">Add to favorites!</button>
       </div>
+
     </form>
   </div>
 
