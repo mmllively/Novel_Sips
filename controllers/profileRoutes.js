@@ -68,19 +68,20 @@ router.delete('/:id', withAuth, async (req, res) => {
       },
     });
 
-    if (!bookData) {
-      res.status(404).json({ message: 'No Book was found with this ID!' });
-      return;
-    }
-    res.status(200).json(bookData);
 
-  } catch (err) {
+//Get Drinks by ID
+router.get('/:id', async (req, res) => {
+  try {
+    const drinkData = await Drink.findByPk(req.params.id);
+
+    const drinks = drinkData.get({plain:true});
+    console.log(drinks);
+    res.render('profile', {drinks, loggedIn: req.session.logged_in});
+  }catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
-
-
-
 
 
 module.exports = router;

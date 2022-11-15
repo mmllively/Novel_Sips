@@ -18,6 +18,9 @@ async function getBooks(){
             bookTitle = response.docs[i].title; 
             console.log(bookTitle);
         }
+
+    //  document.location.replace(`/profile${subject}`) 
+    
     });
 }
 

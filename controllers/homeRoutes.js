@@ -1,5 +1,4 @@
 const router = require('express').Router();
-
 const { Drink, Comment, User, Book } = require('../models');
 const withAuth = require('../utils/auth');
 
@@ -7,7 +6,7 @@ const withAuth = require('../utils/auth');
 router.get('/', async (req, res) => {
   try {
     // get all the drinks with comments
-    const projectData = await Drink.findAll({
+    const drinkData = await Drink.findAll({
 
       include: [
         {
@@ -18,12 +17,13 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const projects = projectData.map((project) => project.get({ plain: true }));
+    const drinks = drinkData.map((drink) => drink.get({ plain: true }));
+
 
 
     //This line is rendering the homepageroutes.hbs
     res.render('homepage', {
-      Comment, 
+      drinks, 
       logged_in: req.session.logged_in 
     });
 
@@ -72,10 +72,7 @@ router.get('/drink/:id', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-})
-
-
-
+});
 
 // // Use withAuth middleware to prevent access to route
 // router.get('/profile', withAuth, async (req, res) => {
@@ -106,11 +103,25 @@ router.get('/login', (req, res) => {
     return;
   }
 
+  res.render('login');
+});
+
+
+
+router.get('/signup', (req, res) => {
+  if (req.session.signedUp) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
+});
+
+
+
   // if (req.session.logged_in) {
   //   res.redirect('/profile');
   //   return;
   // }
-
 
   res.render('login');
 });
@@ -144,15 +155,24 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-
-
-
-// router.get('/profile', async (req, res) =>{
-//   res.render('profile', {
-//     logged_in: req.session.logged_in 
-//   });
+router.get('/profile', (req, res) =>{
+  
+  res.render('profile', {
+    logged_in: req.session.logged_in 
+  });
  
-// })
+});
+
+router.get('/about-us', (req, res) =>{
+
+  res.render('about-us');
+});
+
+router.get('/contact-us', (req, res)=> {
+
+  res.render('contact-us');
+})
+
 
 
 module.exports = router;
