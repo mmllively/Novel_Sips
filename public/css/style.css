@@ -307,6 +307,11 @@ header,
   padding-bottom: 40px;
 }
 
+.contactuscontainer {
+  margin-top: -600px;
+  width: 50%;
+}
+
 /* input form group on contact us pg */
 .contactform {
   padding-top: 8px;
