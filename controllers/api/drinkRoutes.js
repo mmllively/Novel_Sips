@@ -1,24 +1,52 @@
-//Note: this page is all wrong
-
 const router = require('express').Router();
-
-const { Drink } = require('../../models');
+const { Drink } = require('../../models/');
 const withAuth = require('../../utils/auth');
 
-router.get('/drinks', withAuth, async (req, res) => {
 
+//get ALL drinks we have
+router.get('/drink', async (req, res) => {
   try {
-    const newProject = await Project.create({
-      ...req.body,
-      user_id: req.session.user_id,
+    const drinkData = await Drink.findAll({
+      include: [
+      {
+        attributes: ['name', 'description', 'subject'],
+      },
+    ],
+  });
+const drinks = drinkData.map((drink) =>
+drink.get({ plain: true })
+);
+res.render('homepage', {
+  drinks,
+});
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+//get select drinks
+router.get('/drink/:id', withAuth, async (req, res) => {
+  try {
+    const newDrink = await Drink.findByPk(req.params.id, {
+      include: [
+        {
+          attributes: [
+            'id',
+            'name',
+            'description',
+            'subject',
+          ],
+        },
+      ],
     });
 
-    res.status(200).json(newProject);
+    const drink = DrinkData.get({ plain: true })
+    res.render('drink', { drink });
   } catch (err) {
     res.status(400).json(err);
   }
 });
-
+// delete drink
 router.delete('/:id', withAuth, async (req, res) => {
   try {
     const projectData = await Project.destroy({
