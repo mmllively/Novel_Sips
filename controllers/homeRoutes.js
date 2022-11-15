@@ -71,6 +71,8 @@ router.get('/drink/:id', async (req, res) => {
 
   } catch (err) {
     console.log(err);
+  }
+})
 
 router.get('/project/:id', async (req, res) => {
   try {

@@ -29,7 +29,9 @@ Comment.init(
       allowNull: false,
       references: {
         key: "id",
+
         model: "drink"
+
       }
     }
   },
@@ -37,11 +39,7 @@ Comment.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-
     modelName: 'comment',
-
-    modelName: 'Comment',
-
   }
 );
 
