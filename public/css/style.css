@@ -36,7 +36,6 @@ header {
 /* positioning for nav bar links */
 .navbarlinks {
   margin-top: -36px;
-  margin-left: 40%;
 }
 
 /* styling for nav bar links */
@@ -189,6 +188,16 @@ li a:hover {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.pwinstructions,
+.emailinstructions {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d1bea3;
+  font-size: 12px;
+  text-align: center;
+  width: 50%;
+  font-style: italic;
+}
+
 /* input styling for email and pw on login pg */
 .form-input {
   padding: 5px 5px;
@@ -222,3 +231,35 @@ header,
   font-weight: bold;
   margin-left: -5px;
 }
+
+/* beginning of styling for about us pg */
+
+/* title at the top of the about us pg */
+.aboutpgtitle {
+  padding-top: 20px;
+  color: #5f351b;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* subtitle section styling */
+.aboutussection {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 16px;
+  color: #d1bea3;
+  font-size: 18px;
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+/* title styling for our names */
+.nametitle {
+  padding-top: 20px;
+  color: #5f351b;
+  font-size: 26px;
+  text-align: center;
+}
+
+/* profile pics in our about us section */
+.profilepic {}
