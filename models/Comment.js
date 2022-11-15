@@ -29,7 +29,8 @@ Comment.init(
       allowNull: false,
       references: {
         key: "id",
-          model: "drink"
+
+        model: "drink"
 
       }
     }
