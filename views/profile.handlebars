@@ -7,7 +7,11 @@
   <h2 class="subtitle">Welcome to your Book Shelf!</h2>
 </div>
 
-<div>
+{{!-- get books search input and button --}}
+<div class="inputplacement" align="center">
+  <input class="getbooksinput" id="input" placeholder="Enter a book title...">
+  <button class="getbooks" id="searchBtn">Search</button>
+
   <div>
     <h3 class="favesectiontitle">Favorite Books and Drinks</h3>
 
@@ -29,6 +33,7 @@
       </div>
 
     </form>
+
   </div>
 
   {{#if posts.length}}
@@ -52,3 +57,4 @@
 
 
 <script src="/js/profile.js"></script>
+<script src="/js/index.js"></script>

@@ -61,7 +61,7 @@ const drinkData = [
     subject: "mystery"
   },
   {
-    name: "Cocounut Boba Tea",
+    name: "Coconut Boba Tea",
     description: "The boba obsession is hard to get past, especially with creamy sweet coconut to wash it down with.",
     subject: "fantasy"
   },
