@@ -5,12 +5,55 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Contact Us</title>
 </head>
-<header>Contact Us</header>
 
-<body>
+<main>
 
-</body>
+    <body>
+
+        <section class="contactuscontainer">
+            {{!-- pg title --}}
+            <h2 class="contactustitle">Contact Us</h2>
+
+            <form align="center">
+
+                {{!-- name label --}}
+                <div class="form-group"><label class="nameinputtitle">Name:</label></div>
+                {{!-- name input --}}
+                <div class="form-group"><input class="form-input" placeholder="John Doe" type="text" />
+                </div>
+
+                {{!-- email label --}}
+                <div class="form-group"><label for="email-signup" class="emailtitle">Email:</label></div>
+                {{!-- email input --}}
+                <div class="form-group"><input class="form-input" placeholder="johndoe@gmail.com" type="text"
+                        id="email-signup" />
+                </div>
+
+                {{!-- phone label --}}
+                <div class="form-group"><label class="phonetitle">Phone:</label></div>
+                {{!-- phone input --}}
+                <div class="form-group"><input class="form-input" placeholder="555-123-4567" />
+                </div>
+
+                {{!-- user input label --}}
+                <div class="form-group"><label class="passwordtitle">Connect with us!</label></div>
+                {{!-- user input --}}
+                <div class="form-group"><input class="user-input" placeholder="Drop us a line..."
+                        id="password-signup" />
+                </div>
+
+                {{!-- submit button --}}
+                <div class="form-group">
+                    <button class="submitbtn" type="submit">Submit</button>
+                </div>
+
+                {{!-- create a response to the submitted form --}}
+
+            </form>
+    </body>
+
+</main>
 
 </html>
