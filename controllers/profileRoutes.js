@@ -1,26 +1,86 @@
 //requires a login 
-//Shows user saved drinks with books
+//Shows user saved books
 
 const router = require('express').Router();
-const { Drink, Comment, User, Book } = require('../models');
-// const withAuth = require('../utils/auth');
+const { Drink, User, Book } = require('../models');
+const withAuth = require('../utils/auth');
 
-//get all drinks they selected
-// needs withAuth in the function
-router.get('/', async (req, res) => {
+
+// GET a Books
+router.get('/book', withAuth, async (req, res) => {
   try {
-  // const posts = postData.map((post) => post.get({plain: true}));
-  res.render("profile",{
-    // posts, logged_in: req.session.logged_in 
-  });
+    const bookData = await Book.findAll({
+      ...req.body,
+       user_id: req.session.user_id });
 
-} catch (err) {
-console.info(err);
-res.status(500).json(err);
-}
-})
+    if (!bookData) {
+      res.status(404).json({ message: 'Only dust was found in the Bookshelf!' });
+      return;
+    }
+    res.status(200).json(bookData);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
+// ADD a Book
+router.post('/book', withAuth, async (req, res) => {
+  try {
+      const newBook = await Book.create({
+          ...req.body,
+          user_id: req.session.user_id
+      });
+
+      res.status(200).json(newBook);
+
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
+
+
+// UPDATE a Book
+router.put('/book/:id', withAuth, async (req, res) => {
+  try {
+    const bookData = await Book.update(req.body, {
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id
+      },
+    });
+
+    if (!bookData[0]) {
+      res.status(404).json({ message: 'No Book was found with this ID!' });
+      return;
+    }
+    res.status(200).json(bookData);
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// DELETE a Book
+router.delete('/book/:id', withAuth, async (req, res) => {
+  try {
+    const bookData = await Book.destroy({
+      where: {
+        id: req.params.id,
+        user_id: req.session.user_id
+      },
+    });
+
+    if (!bookData) {
+      res.status(404).json({ message: 'No Book was found with this ID!' });
+      return;
+    }
+    res.status(200).json(bookData);
+
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 
