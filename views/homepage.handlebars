@@ -11,7 +11,22 @@
     <br>to bring you the ultimate reading experience!
   </p>
 
+
+  {{!-- get books search input and button --}}
+  <div class="inputplacement" align="center">
+    <input class="getbooksinput" id="input" placeholder="Search for a title...">
+    <button class="getbooks" id="searchBtn">Get Books</button>
+
+    {{!-- create a container for books output --}}
+    {{!-- create cards for each individual book --}}
+    <card class="booksoutput">
+      <div class="output" id="output"></div>
+    </card>
+
+  </div>
+
 <script src="/js/index.js"></script>
+
 
 
 

@@ -1,6 +1,5 @@
 const router = require('express').Router();
-
-const { Drink, Comment, User } = require('../models');
+const { Drink, Comment, User, Book } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -19,6 +18,7 @@ router.get('/', async (req, res) => {
 
     // Serialize data so the template can read it
     const drinks = drinkData.map((drink) => drink.get({ plain: true }));
+
 
 
     //This line is rendering the homepageroutes.hbs
@@ -72,11 +72,7 @@ router.get('/drink/:id', async (req, res) => {
   } catch (err) {
     console.log(err);
   }
-
 });
-
-
-
 
 // // Use withAuth middleware to prevent access to route
 // router.get('/profile', withAuth, async (req, res) => {
@@ -107,8 +103,25 @@ router.get('/login', (req, res) => {
     return;
   }
 
- 
+  res.render('login');
+});
 
+
+
+router.get('/signup', (req, res) => {
+  if (req.session.signedUp) {
+    res.redirect('/');
+    return;
+  }
+  res.render('signup');
+});
+
+
+
+  // if (req.session.logged_in) {
+  //   res.redirect('/profile');
+  //   return;
+  // }
 
   res.render('login');
 });
@@ -142,9 +155,6 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-
-
-
 router.get('/profile', (req, res) =>{
   
   res.render('profile', {
@@ -162,6 +172,7 @@ router.get('/contact-us', (req, res)=> {
 
   res.render('contact-us');
 })
+
 
 
 module.exports = router;
