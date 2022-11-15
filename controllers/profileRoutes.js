@@ -65,7 +65,7 @@ router.delete('/:id', withAuth, async (req, res) => {
       where: {
         id: req.params.id,
         user_id: req.session.user_id
-      },
+      }
     });
   } catch (err) {
     res.status(500).json(err);

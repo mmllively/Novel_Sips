@@ -37,11 +37,21 @@
 </div>
 </section>
 
+<section>
+ {{!-- get books search input and button --}}
+  <div class="inputplacement" align="center">
+    <input class="getbooksinput" id="input" placeholder="Search for a title...">
+    <button class="getbooks" id="searchBtn">Get Books</button>
+
+    {{!-- create a container for books output --}}
+    {{!-- create cards for each individual book --}}
+    <card class="booksoutput">
+      <div class="output" id="output"></div>
+    </card>
+</section>
 
 {{#if books.length}}
 <div class="col-md-6 post-list">
-  <h3>Bookshelf:</h3>
-
   {{#each book as |book|}}
   <div class="row mb-2">
     <div class="col-md-8">
