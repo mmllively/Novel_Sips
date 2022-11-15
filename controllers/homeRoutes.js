@@ -153,6 +153,16 @@ router.get('/profile', (req, res) =>{
     logged_in: req.session.logged_in 
   });
  
+});
+
+router.get('/about-us', (req, res) =>{
+
+  res.render('about-us');
+});
+
+router.get('/contact-us', (req, res)=> {
+
+  res.render('contact-us');
 })
 
 
