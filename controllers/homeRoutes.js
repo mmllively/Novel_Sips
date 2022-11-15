@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-const { Drink, Comment, User } = require('../models');
+const { Drink, Comment, User, Book } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -147,13 +147,12 @@ router.get('/signup', (req, res) => {
 
 
 
-router.get('/profile', (req, res) =>{
-  
-  res.render('profile', {
-    logged_in: req.session.logged_in 
-  });
+// router.get('/profile', async (req, res) =>{
+//   res.render('profile', {
+//     logged_in: req.session.logged_in 
+//   });
  
-})
+// })
 
 
 module.exports = router;

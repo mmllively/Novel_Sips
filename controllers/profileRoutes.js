@@ -7,17 +7,14 @@ const withAuth = require('../utils/auth');
 
 
 // GET a Books
-router.get('/book', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
+  console.log("working")
   try {
-    const bookData = await Book.findAll({
-      ...req.body,
-       user_id: req.session.user_id });
+    const bookData = await Book.findAll();
 
-    if (!bookData) {
-      res.status(404).json({ message: 'Only dust was found in the Bookshelf!' });
-      return;
-    }
-    res.status(200).json(bookData);
+       const books = bookData.map((book) => book.get({plain:true}));
+       console.log(books);
+       res.render('profile', {books, loggedIn: req.session.logged_in});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -25,7 +22,7 @@ router.get('/book', withAuth, async (req, res) => {
 
 
 // ADD a Book
-router.post('/book', withAuth, async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
       const newBook = await Book.create({
           ...req.body,
@@ -41,7 +38,7 @@ router.post('/book', withAuth, async (req, res) => {
 
 
 // UPDATE a Book
-router.put('/book/:id', withAuth, async (req, res) => {
+router.put('/:id', withAuth, async (req, res) => {
   try {
     const bookData = await Book.update(req.body, {
       where: {
@@ -62,7 +59,7 @@ router.put('/book/:id', withAuth, async (req, res) => {
 });
 
 // DELETE a Book
-router.delete('/book/:id', withAuth, async (req, res) => {
+router.delete('/:id', withAuth, async (req, res) => {
   try {
     const bookData = await Book.destroy({
       where: {

@@ -1,4 +1,4 @@
-const con = require('../../config/connection');
+
 
 const newFormHandler = async (event) => {
     event.preventDefault();
@@ -8,18 +8,9 @@ const newFormHandler = async (event) => {
 
      console.log(title);
      console.log(description);
-     
-    con.connect(function(err) {
-      if (err) throw err;
-      var sql = "INSERT INTO book (book_title, description) VALUES (title, description)";
-      con.query(sql, function (err, result) {
-        if (err) throw err;
-        console.log("Book Added!");
-      });
-    });
 
   
-    if (title && text) {
+    if (title && description) {
       const response = await fetch(`/api/bookshelf`, {
         method: 'POST',
         body: JSON.stringify({ title, description }),
