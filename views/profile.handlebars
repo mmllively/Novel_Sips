@@ -61,7 +61,7 @@
   {{#each book as |book|}}
   <div class="row mb-2">
     <div class="col-md-8">
-      <h4><a href="/all-books/{{book.user_id}}">{{book.book_title}}</a></h4>
+      <h4>{{book.title}}</h4>
     </div>
     <button class="btn btn-sm btn-danger"><a href="/edit/{{book.id}}">EDIT</a></button>
     <div class="col-md-4">
@@ -73,10 +73,13 @@
 {{/if}}
 </div>
 
+
+
+
   {{#if loggedIn}}
   <section class="flex-row justify-center">
-   <p >{{drinks.name}}</p>
-   <p >{{drinks.description}}</p>
+   <p >{{drink.name}}</p>
+   <p >{{drink.description}}</p>
    {{!-- <button class="getdrinks" id="drinkBtn">Drink Generator</button> --}}
   </section>
 </section>
@@ -88,10 +91,9 @@
 
  
 
-<script src="/js/newBook.js"></script>
-<script src="/js/profile.js"></script>
+{{!-- <script src="/js/newBook.js"></script> --}}
 <script src = "/js/index.js"></script>
-<script src = "/js/login.js"></script>
+
 
 
 
