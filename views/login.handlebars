@@ -6,25 +6,42 @@
     <img class="heroimg"
       src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
 
-    <h2 class="logintitle">Log in to your Novel Sips account:</h2>
+    {{!-- subtitle and paragraph --}}
+    <h2 class="subtitle">
+      Find the perfect pairing for your current read!
+    </h2>
+    <p class="subtitle-p">Custom book and drink recommendations
+      <br>to bring you the ultimate reading experience!
+    </p>
 
-    {{!-- Email & password login form --}}
-    <form lass="loginbtn" align="center">
+    <section class="logincontainer" align="center">
+      <h2 class="logintitle">Log in to your Novel Sips account:</h2>
+
+      {{!-- Email & password login form --}}
 
       {{!-- email label --}}
-      <div class="form-group"><label for="email-login" class="emailtitle">Email:</label></div>
+      <div class="loginform"><label for="email-login" class="emailtitle">Email:</label></div>
       {{!-- email input --}}
-      <div class="form-group"><input class="form-input" type="text" id="email-login" /></div>
+      <div class="loginform"><input class="form-input" type="text" id="email-login" /></div>
 
       {{!-- password label --}}
-      <div class="form-group"><label for="password-login" class="passwordtitle">Password:</label></div>
+      <div class="loginform"><label for="password-login" class="passwordtitle">Password:</label></div>
       {{!-- password input --}}
-      <div class="form-group"><input class="form-input" type="password" id="password-login" /></div>
+      <div class="loginform"><input class="form-input" type="password" id="password-login" /></div>
 
       {{!-- submit button --}}
-      <div class="form-group">
+      <div class="loginform">
         <button class="loginbtn" type="submit">Submit</button>
       </div>
+
+      {{!-- sign up redirection if you dont have an account --}}
+      <div class="signupredirection">
+        <p class="signupredirection-p">
+          Don't have an account? Sign up <a class="signup-p-link" title="Sign up for an account!"
+            href="/signup">here</a>!</p>
+      </div>
+
+    </section>
 
     </form>
 

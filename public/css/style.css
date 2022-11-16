@@ -36,27 +36,10 @@ header {
   width: 100%;
 }
 
-footer {
-  background-color: #5f351b;
-  color: #d1bea3;
-  border-top: solid 1px #d1bea3;
-  width: 100%;
-  height: 30px;
-  position: fixed;
-  bottom: 0;
-}
-
-.footerp {
-  color: #d1bea3;
-  text-align: center;
-  font-family: dancing script;
-  font-size: 20px;
-  padding-top: 3px;
-}
-
 /* positioning for nav bar links */
 .navbarlinks {
   margin-top: -36px;
+  padding-right: 8%;
 }
 
 /* styling for nav bar links */
@@ -78,26 +61,23 @@ li a:hover {
   color: #dfdad2;
 }
 
-/* styling for each pg title */
-.subtitle,
-.logintitle,
-.signuptitle,
-.profilepgtitle {
-  margin-top: -550px;
-  color: #5f351b;
-  font-size: 32px;
-  width: 50%;
-  text-align: center;
+
+footer {
+  background-color: #5f351b;
+  color: #d1bea3;
+  border-top: solid 1px #d1bea3;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
 }
 
-/* subtitle paragraph on home pg */
-.subtitle-p {
-  width: 50%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  padding-top: 18px;
+.footerp {
   color: #d1bea3;
   text-align: center;
+  font-family: dancing script;
+  font-size: 20px;
+  padding-top: 3px;
 }
 
 /* hero img on main pg and other pgs */
@@ -107,9 +87,49 @@ li a:hover {
   margin-left: 50%;
 }
 
-/* log in + sign up button placement on nav bar when signed out */
+/* subtitle paragraph on home pg */
+.subtitle-p {
+  width: 50%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: #d1bea3;
+  text-align: center;
+}
+
+/* styling for profile and main pg title */
+.subtitle,
+.profilepgtitle {
+  margin-top: -575px;
+  color: #5f351b;
+  font-size: 32px;
+  width: 50%;
+  text-align: center;
+}
+
+/* styling for sign up and login pg title */
+.logintitle,
+.signuptitle {
+  color: #d1bea3;
+  font-size: 32px;
+  text-align: center;
+
+}
+
+.logincontainer,
+.signupcontainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  width: 40%;
+  border-radius: 15px 15px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
 /* bookshelf + logout button placement on navbar when signed in */
-.loginsignupbutton,
 .bookshelf-logoutbtn {
   margin-top: -35px;
   margin-left: 88.5%;
@@ -157,19 +177,38 @@ li a:hover {
   font-weight: bold;
 }
 
+
+/* log in + sign up button placement on nav bar when not signed in */
+.loginsignupbutton {
+  width: 50%;
+  padding-top: 15px;
+}
+
+/* redirection to signup from login pg */
+.signupredirection,
+.signinredirection {
+  padding-top: 15px;
+}
+
+/* redirection to signup link in paragraph tag */
+.signup-p-link,
+.signin-p-link {
+  color: rgb(222, 94, 47);
+}
+
 /* input styling for get books search */
-.getbooksinput {
+/* .getbooksinput {
   width: 250px;
   padding: 7px 7px;
   border-radius: 5px;
-  border: none;
-}
+  border: none; 
+} */
 
 /* input placement for get books search */
-.inputplacement {
+/* .inputplacement {
   padding-top: 18px;
   width: 50%;
-}
+} */
 
 /* output of books results from search */
 .output {
@@ -199,23 +238,29 @@ li a:hover {
   width: 50%;
 }
 
+.loginform,
+.signupform {
+  padding-top: 10px;
+}
+
 /* label for email and password on login pg */
 .emailtitle,
 .passwordtitle,
 .usernametitle,
 .nametitle {
   font-size: 18px;
-  color: #d1bea3;
+  color: #dfdad2;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .pwinstructions,
-.emailinstructions {
+.emailinstructions,
+.signupredirection-p,
+.signinredirection-p {
   font-family: Arial, Helvetica, sans-serif;
   color: #d1bea3;
   font-size: 12px;
   text-align: center;
-  width: 50%;
   font-style: italic;
 }
 

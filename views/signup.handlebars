@@ -6,39 +6,58 @@
   <img class="heroimg"
     src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
 
-  <h2 class="signuptitle">Sign up for a Novel Sips account:</h2>
+  {{!-- subtitle and paragraph --}}
+  <h2 class="subtitle">
+    Find the perfect pairing for your current read!
+  </h2>
+  <p class="subtitle-p">Custom book and drink recommendations
+    <br>to bring you the ultimate reading experience!
+  </p>
 
-  {{!-- Username, email & password signup form --}}
-  <form class="form-signup-form" align="center">
+  <section class="signupcontainer">
+    <h2 class="signuptitle">Sign up for a Novel Sips account:</h2>
 
-    {{!-- username label --}}
-    <div class="form-group"><label for="username-signup" class="usernametitle">Username:</label></div>
-    {{!-- username input --}}
-    <div class="form-group"><input class="form-input" placeholder="Enter a username" type="text" id="username-signup" />
-    </div>
+    {{!-- Username, email & password signup form --}}
+    <form class="form-signup-form" align="center">
 
-    {{!-- email label --}}
-    <div class="form-group"><label for="email-signup" class="emailtitle">Email:</label></div>
-    <p class="emailinstructions">Please enter a valid email address.</p>
+      {{!-- username label --}}
+      <div class="signupform"><label for="username-signup" class="usernametitle">Username:</label></div>
+      {{!-- username input --}}
+      <div class="signupform"><input class="form-input" placeholder="Enter a username" type="text"
+          id="username-signup" />
+      </div>
 
-    {{!-- email input --}}
-    <div class="form-group"><input class="form-input" placeholder="johndoe@gmail.com" type="text" id="email-signup" />
-    </div>
+      {{!-- email label --}}
+      <div class="signupform"><label for="email-signup" class="emailtitle">Email:</label></div>
+      <p class="emailinstructions">Please enter a valid email address.</p>
 
-    {{!-- password label --}}
-    <div class="form-group"><label for="password-signup" class="passwordtitle">Password:</label></div>
-    <p class="pwinstructions">Password must contain atleast 8 characters.</p>
-    {{!-- password input --}}
-    <div class="form-group"><input class="form-input" placeholder="Enter a password" type="password"
-        id="password-signup" />
-    </div>
+      {{!-- email input --}}
+      <div class="signupform"><input class="form-input" placeholder="johndoe@gmail.com" type="text" id="email-signup" />
+      </div>
 
-    {{!-- sign up button --}}
-    <div class="form-group">
-      <button class="signupbtn" type="submit">Sign-up!</button>
-    </div>
+      {{!-- password label --}}
+      <div class="signupform"><label for="password-signup" class="passwordtitle">Password:</label></div>
+      <p class="pwinstructions">Password must contain atleast 8 characters.</p>
+      {{!-- password input --}}
+      <div class="signupform"><input class="form-input" placeholder="Enter a password" type="password"
+          id="password-signup" />
+      </div>
 
-  </form>
+      {{!-- sign up button --}}
+      <div class="signupform">
+        <button class="signupbtn" type="submit">Sign-up!</button>
+      </div>
+
+
+      {{!-- sign up redirection if you dont have an account --}}
+      <div class="signinredirection">
+        <p class="signinredirection-p">
+          Already have an account? Sign in <a class="signin-p-link" title="Sign in to your account!"
+            href="/login">here</a>!</p>
+      </div>
+
+    </form>
+  </section>
 
 </div>
 
