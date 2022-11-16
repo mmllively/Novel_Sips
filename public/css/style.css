@@ -130,7 +130,7 @@ margin-left: 65%; */
   width: 40%;
   margin-left: 4.25%;
   margin-right: 5%;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   border: #d1bea3 1px solid;
   border-radius: 15px 15px;
@@ -141,12 +141,16 @@ margin-left: 65%; */
 .introstatementtop {
   font-family: dancing script;
   font-size: 30px;
-  color: #d1bea3;
+  color: rgb(222, 94, 47);
+}
+
+.fa-solid {
+  color: #a2704f;
 }
 
 .introbasic {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #d1bea3;
   padding-left: 45px;
   padding-right: 45px;
@@ -268,18 +272,18 @@ margin-left: 65%; */
 }
 
 /* input styling for get books search */
-/* .getbooksinput {
+.getbooksinput {
   width: 250px;
   padding: 7px 7px;
   border-radius: 5px;
-  border: none; 
-} */
+  border: none;
+}
 
 /* input placement for get books search */
-/* .inputplacement {
+.inputplacement {
   padding-top: 18px;
   width: 50%;
-} */
+}
 
 /* output of books results from search */
 .output {
@@ -317,8 +321,7 @@ margin-left: 65%; */
 /* label for email and password on login pg */
 .emailtitle,
 .passwordtitle,
-.usernametitle,
-.nametitle {
+.usernametitle {
   font-size: 18px;
   color: #dfdad2;
   font-family: Arial, Helvetica, sans-serif;
@@ -397,8 +400,8 @@ header,
 }
 
 .contactustitle {
-  padding-top: -13px;
-  color: #5f351b;
+  padding-bottom: 8px;
+  color: #d1bea3;
   font-size: 36px;
   text-align: center;
 }
@@ -420,9 +423,11 @@ header,
 
 /* title styling for our names */
 .nametitle {
-  padding-top: 40px;
-  color: #5f351b;
+  padding-bottom: 10px;
+  padding-top: 20px;
   font-size: 28px;
+  color: #d1bea3;
+  font-family: dancing script;
   font-weight: bold;
   text-align: center;
 }
@@ -436,7 +441,7 @@ header,
   width: 120px;
 }
 
-/* paragraph with out about info */
+/* paragraph with our about info */
 .aboutinfo {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 20px;
@@ -448,10 +453,21 @@ header,
   margin-right: 10%;
   background-color: #5f351b;
   padding-bottom: 20px;
-  border: 2px solid #d1bea3;
+  border: 1px solid #d1bea3;
+  border-radius: 15px 15px;
 }
 
 /* links to contact us in our about us section */
+.contactlinksgroup {
+  width: 60%;
+  margin-right: 30%;
+}
+
+.pic {
+  margin-top: -95px;
+  margin-left: 50%;
+}
+
 .contactlinks {
   text-decoration: none;
   color: #d1bea3;
@@ -463,15 +479,27 @@ header,
   color: #dfdad2;
 }
 
+/* container with hero img and contact form on contact pg */
 .contactuscontainer {
-  margin-top: 84px;
+  margin-top: 70px;
   width: 50%;
+}
+
+/* contact card with form */
+.contactuscard {
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  margin-left: 12%;
+  margin-right: 12%;
+  border-radius: 15px 15px;
+  margin-top: 6px;
+  padding-bottom: 8px;
 }
 
 .contactusheroimg {
   height: 100%;
   width: 50%;
-  margin-top: -20px;
+  margin-top: -6px;
   margin-left: 50%;
   position: fixed;
 }
@@ -486,14 +514,14 @@ header,
 .nameinputtitle,
 .phonetitle {
   font-size: 18px;
-  color: #d1bea3;
+  color: #dfdad2;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 /* user input field */
 .user-input {
   width: 400px;
-  height: 200px;
+  height: 150px;
   text-align: center;
   border-radius: 5px;
   border: none;
