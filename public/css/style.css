@@ -196,7 +196,7 @@ margin-left: 65%; */
 .logincontainer,
 .signupcontainer {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 10px;
   border: 1px solid #d1bea3;
   background-color: #5f351b;
   width: 40%;
@@ -399,6 +399,22 @@ header,
   text-align: center;
 }
 
+/* links to go to our individual sections */
+.fourloopinladies {
+  /* border-bottom: 1px solid #5f351b; */
+}
+
+.fourloopinladies a {
+  font-family: dancing script;
+  text-decoration: none;
+  font-size: 24px;
+  color: #dfdad2;
+}
+
+.fourloopinladies a:hover {
+  color: #5f351b;
+}
+
 .contactustitle {
   padding-bottom: 8px;
   color: #d1bea3;
@@ -425,8 +441,8 @@ header,
 .nametitle {
   padding-bottom: 10px;
   padding-top: 20px;
-  font-size: 28px;
-  color: #d1bea3;
+  font-size: 32px;
+  color: #dfdad2;
   font-family: dancing script;
   font-weight: bold;
   text-align: center;
@@ -445,14 +461,16 @@ header,
 .aboutinfo {
   font-family: Arial, Helvetica, sans-serif;
   padding-top: 20px;
+  padding-bottom: 5px;
   padding: 15px 15px;
   color: #dfdad2;
   font-size: 16px;
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 40px;
   background-color: #5f351b;
-  padding-bottom: 20px;
   border: 1px solid #d1bea3;
   border-radius: 15px 15px;
 }
@@ -460,12 +478,12 @@ header,
 /* links to contact us in our about us section */
 .contactlinksgroup {
   width: 60%;
-  margin-right: 30%;
+  margin-left: 30%;
 }
 
 .pic {
   margin-top: -95px;
-  margin-left: 50%;
+  margin-right: 42%;
 }
 
 .contactlinks {
