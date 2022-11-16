@@ -223,8 +223,10 @@ li a:hover {
 .form-input {
   padding: 5px 5px;
   border-radius: 5px;
+  font-size: 14px;
   width: 250px;
   border: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header,
@@ -392,31 +394,31 @@ header,
 
 /* beginning of drinks page styling */
 
-/* container on the left with title and search */
-.drinksearchcontainer {
-  width: 40%;
-}
-
-
+/* pg title on drinks page */
 .drinkstitle {
   padding-top: 70px;
   font-family: dancing script;
   color: #5f351b;
-  font-size: 36px;
-  width: 60%;
-  text-align: right;
+  font-size: 40px;
+  text-align: center;
+}
+
+/* container on the left with title and search */
+.searchdrinktitle {
+  width: 50%;
+  color: #d1bea3;
 }
 
 /* container that contains carousel */
 .drinkscontainer {
-  padding-top: -10px;
+  margin-top: -150px;
   background-color: #a2704f;
 }
 
 /* container with the carousel */
 .carouselcontainer {
-  width: 60%;
-  margin-left: 38%;
+  width: 50%;
+  margin-left: 47%;
   /* margin-right: 20%; */
   padding-bottom: 40px;
 }
@@ -441,8 +443,4 @@ header,
   margin-right: -20%;
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
-}
-
-.sr-only {
-  color: black;
 }
