@@ -90,12 +90,50 @@ footer {
 /* subtitle paragraph on home pg */
 .subtitle-p {
   width: 50%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  padding-top: 18px;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 20px;
+  padding-top: 8px;
   padding-bottom: 18px;
   color: #d1bea3;
   text-align: center;
+}
+
+/* paragraph intro on home pg */
+.intro-subtitle {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 40%;
+  margin-left: 4.25%;
+  margin-right: 5%;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #d1bea3 1px solid;
+  border-radius: 15px 15px;
+  color: #d1bea3;
+  background-color: #5f351b;
+}
+
+.introstatementtop {
+  font-family: dancing script;
+  font-size: 30px;
+  color: #d1bea3;
+}
+
+.introbasic {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #d1bea3;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.introstatements {
+  font-family: dancing script;
+  font-size: 26px;
+  color: rgb(222, 94, 47);
 }
 
 /* styling for profile and main pg title */
@@ -180,7 +218,6 @@ footer {
 
 /* log in + sign up button placement on nav bar when not signed in */
 .loginsignupbutton {
-  width: 50%;
   padding-top: 15px;
 }
 
