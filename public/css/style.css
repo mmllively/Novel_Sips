@@ -28,6 +28,8 @@ body {
 }
 
 header {
+  top: 0;
+  height: 48px;
   background-color: #5f351b;
   color: #d1bea3;
   padding-bottom: 16px;
@@ -83,9 +85,29 @@ footer {
 /* hero img on main pg and other pgs */
 .heroimg {
   height: 660px;
+  margin-top: 61.5px;
   width: 50%;
   margin-left: 50%;
 }
+
+.heroimghomepg {
+  height: 100%;
+  width: 50%;
+  margin-top: -20px;
+  margin-left: 50%;
+  position: fixed;
+}
+
+.homepgcontainer {
+  margin-top: 660px;
+  margin-bottom: 60px;
+}
+
+/* margin-top: 61.5px;
+width: 35%;
+height: 100%;
+position: fixed;
+margin-left: 65%; */
 
 /* subtitle paragraph on home pg */
 .subtitle-p {
@@ -153,6 +175,18 @@ footer {
   font-size: 32px;
   text-align: center;
 
+}
+
+.loginsignup-card {
+  margin-top: 650px;
+}
+
+.loginsignup-card .heroimg {
+  height: 100%;
+  width: 50%;
+  margin-top: -11px;
+  margin-left: 50%;
+  position: fixed;
 }
 
 .logincontainer,
@@ -354,9 +388,15 @@ header,
 }
 
 /* title at the top of the about us pg */
-.aboutpgtitle,
-.contactustitle {
+.aboutpgtitle {
   padding-top: 32px;
+  color: #5f351b;
+  font-size: 36px;
+  text-align: center;
+}
+
+.contactustitle {
+  padding-top: -13px;
   color: #5f351b;
   font-size: 36px;
   text-align: center;
@@ -423,8 +463,16 @@ header,
 }
 
 .contactuscontainer {
-  margin-top: -600px;
+  margin-top: 84px;
   width: 50%;
+}
+
+.contactusheroimg {
+  height: 100%;
+  width: 50%;
+  margin-top: -20px;
+  margin-left: 50%;
+  position: fixed;
 }
 
 /* input form group on contact us pg */
