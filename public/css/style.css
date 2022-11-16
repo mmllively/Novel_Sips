@@ -444,3 +444,27 @@ header,
   height: 100px;
   background: rgba(0, 0, 0, 0.5);
 }
+
+/* button for scroll to the top to the screen function */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  left: 16px;
+  z-index: 99;
+  font-size: 14px;
+  border: 1px solid #dfdad2;
+  outline: none;
+  background-color: rgb(222, 94, 47);
+  color: #dfdad2;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  cursor: pointer;
+  color: #dfdad2;
+  text-decoration: none;
+  font-weight: bold;
+}
