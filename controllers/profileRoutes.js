@@ -78,13 +78,16 @@ router.get('/:id', async (req, res) => {
     const drinkData = await Drink.findByPk(req.params.id);
 
     const drinks = drinkData.get({plain:true});
-    console.log(drinks);
+    // console.log(drinks);
     res.render('profile', {drinks, loggedIn: req.session.logged_in});
   }catch (err) {
     console.log(err);
     res.status(500).json(err);
   }
 });
+
+
+
 
 
 module.exports = router;

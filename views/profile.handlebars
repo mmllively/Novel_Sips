@@ -41,7 +41,7 @@
  {{!-- get books search input and button --}}
   <div class="inputplacement" align="center">
     <input class="getbooksinput" id="input" placeholder="Search for a title...">
-    <button class="getbooks" id="searchBtn">Get Books</button>
+    <button class="getbooks" id="searchBtn">Find Books</button>
 
     {{!-- create a container for books output --}}
     {{!-- create cards for each individual book --}}
@@ -49,6 +49,12 @@
       <div class="output" id="output"></div>
     </card>
 </section>
+
+
+
+
+
+
 
 {{#if books.length}}
 <div class="col-md-6 post-list">
@@ -69,7 +75,9 @@
 
   {{#if loggedIn}}
   <section class="flex-row justify-center">
-   <p>{{drinks.subject}}</p>
+   <p >{{drinks.name}}</p>
+   <p >{{drinks.description}}</p>
+   {{!-- <button class="getdrinks" id="drinkBtn">Drink Generator</button> --}}
   </section>
 </section>
 
