@@ -116,11 +116,8 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-
-
-
-
-
+//   res.render('login');
+// });
 
 router.get('/signup', (req, res) => {
   if (req.session.signedUp) {
@@ -130,39 +127,30 @@ router.get('/signup', (req, res) => {
   res.render('signup');
 });
 
-
+// LOG IN
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
-
-
   if (req.session.logged_in) {
     res.redirect('/profile');
     return;
   }
 
-
   res.render('login');
 });
 
-  
+//SIGN UP
 router.get('/signup', (req, res) => {
  
   res.render('signup');
 });
 
-router.get('/profile', (req, res) =>{
-  
-  res.render('profile', {
-    logged_in: req.session.logged_in 
-  });
- 
-});
-
+//ABOUT US
 router.get('/about-us', (req, res) =>{
 
   res.render('about-us');
 });
 
+//CONTAC US
 router.get('/contact-us', (req, res)=> {
 
   res.render('contact-us');
