@@ -375,15 +375,16 @@ header,
 
 /* hero img on about pg img size and placement */
 .aboutheroimg {
-  margin-top: 61.5px;
+  margin-top: 65px;
   width: 35%;
   height: 100%;
   position: fixed;
-  margin-left: 65%;
+  margin-right: 65%;
 }
 
 .aboutuscontainer {
   width: 65%;
+  margin-left: 35%;
   padding-bottom: 40px;
 }
 
@@ -581,6 +582,23 @@ header,
   position: fixed;
   bottom: 38px;
   left: 16px;
+  z-index: 99;
+  font-size: 14px;
+  border: 1px solid #dfdad2;
+  outline: none;
+  background-color: rgb(222, 94, 47);
+  color: #dfdad2;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* top to screen button on contact pg */
+#aboutusmyBtn {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  right: 16px;
   z-index: 99;
   font-size: 14px;
   border: 1px solid #dfdad2;
