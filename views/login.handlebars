@@ -17,36 +17,40 @@
   </p>
 
   <section class="logincontainer" align="center">
-    <h2 class="logintitle">Log in to your Novel Sips account:</h2>
-
-    {{!-- Email & password login form --}}
-
-    {{!-- email label --}}
-    <div class="loginform"><label for="email-login" class="emailtitle">Email:</label></div>
-    {{!-- email input --}}
-    <div class="loginform"><input class="form-input" type="text" id="email-login" /></div>
-
-    {{!-- password label --}}
-    <div class="loginform"><label for="password-login" class="passwordtitle">Password:</label></div>
-    {{!-- password input --}}
-    <div class="loginform"><input class="form-input" type="password" id="password-login" /></div>
-
-    {{!-- submit button --}}
-    <div class="loginform">
-      <button class="loginbtn" type="submit">Submit</button>
-    </div>
-
-    {{!-- sign up redirection if you dont have an account --}}
-    <div class="signupredirection">
-      <p class="signupredirection-p">
-        Don't have an account? Sign up <a class="signup-p-link" title="Sign up for an account!" href="/signup">here</a>!
-      </p>
-    </div>
+    <form class="loginbtn">
+      {{!-- Email & password login form --}}
+      <h2 class="logintitle">Log in to your Novel Sips account:</h2>
+      {{!-- email label --}}
+      <div class="loginform">
+        <label for="email-login" class="emailtitle">Email:</label>
+      </div>
+      {{!-- email input --}}
+      <div class="loginform">
+        <input class="form-input" type="text" id="email-login" />
+      </div>
+      {{!-- password label --}}
+      <div class="loginform">
+        <label for="password-login" class="passwordtitle">Password:</label>
+      </div>
+      {{!-- password input --}}
+      <div class="loginform">
+        <input class="form-input" type="password" id="password-login" />
+      </div>
+      {{!-- submit button --}}
+      <div class="loginform">
+        <button class="loginbtn" type="submit">Submit</button>
+      </div>
+      {{!-- sign up redirection if you dont have an account --}}
+      <div class="signupredirection">
+        <p class="signupredirection-p">
+          Don't have an account? Sign up
+          <a class="signup-p-link" title="Sign up for an account!" href="/signup">here</a>!
+        </p>
+      </div>
+    </form>
 
   </section>
 
-  </form>
-
 </div>
 
-<script src="./js/login.js"></script>
+<script src="/js/login.js"></script>
