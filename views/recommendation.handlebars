@@ -1,67 +1,55 @@
-
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>randomizer</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Novel Sips | Drink Recommendations</title>
 </head>
-<header>Drink Recommendation!</header>
+
 <body>
-<div class="row">
-  <div class="column" align="center" >
-    <div class="card" box-shadow = "0 4px 8px 0 rgba(23, 145, 33, 0.2)" padding = "16px"
-    text-align = "center"
-    background-color= "#6e0707">{{book.title}}</div>
-  </div> 
-  <div class="row" >
-  <div class="column" align="center">
-    <div class="card">{{book.author}}</div>
+
+  <div class="recommendationcard" align="center">
+
+    <div class="reccard" align="center">
+      <div class="booktitle">{{book.title}}</div>
+    </div>
+
+    <div class="reccard" align="center">
+      <div class="bookauthor">{{book.author}}</div>
+    </div>
+
+    <div class="reccard" align="center">
+      <div class="bookimg">{{book.image}}</div>
+    </div>
+
+    <div class="reccard" align="center">
+      <div class="card">{{drink.name}}</div>
+    </div>
+
+    <div class="reccard" align="center">
+      <div class="card">{{drink.description}}</div>
+    </div>
+
+    <div class="imgcontainer">
+      <img class="drinkimg" src="/images/{{drink.filename}}">
+    </div>
+
   </div>
-  <div class="row">
-  <div class="column" align="center">
-    <div class="card">{{book.image}}</div>
-  </div>
-  <div class="row">
-  <div class="column" align="center">
-    <div class="card">{{drink.name}}</div>
-  </div>
-  <div class="row">
-  <div class="column" align="center">
-    <div class="card">{{drink.description}}</div>
-  </div>
-    <div class="imgcontainer"> <img class= "img-card" src="/images/{{drink.filename}}">
-  </div>
-  </div>
-  </body>
-  <div class="row mt-4">
-  <div class="col-md-6">
-    <h3>Leave a Review:</h3>
+</body>
 
 
-      <div class="form-group">
-        <label for="project-desc">Your Review:</label>
-        <textarea class="form-input" id="project-desc" name="project-desc"></textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" class="btn btn-primary">Save</button>
-      </div>
-    </form>
-  </div>
-{{!-- </div><div>
-    {{!-- <h1>{{book.title}}</h1>
-    <h1>{{book.author}}</h1>
-    <h1>{{book.image}}</h1>
-  
-    <h1>{{drink.name}}</h1>
-    <h1>{{drink.description}}</h1> --}}
-    {{!-- <img src='/images/{{drink.filename}}'>
+
     
+  {{!--
+</div>
+<div>
+  {{!-- <h1>{{book.title}}</h1>
+  <h1>{{book.author}}</h1>
+  <h1>{{book.image}}</h1>
+
+  <h1>{{drink.name}}</h1>
+  <h1>{{drink.description}}</h1> --}}
+  {{!-- <img src='/images/{{drink.filename}}'>
+
 </div> --}}
 
 
-                 
-                <script src = "/js/index.js"></script>
-              
+
+<script src="/js/index.js"></script>
