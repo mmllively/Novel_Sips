@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -12,96 +11,306 @@ body {
 /* novel sips title in nav bar */
 .pgtitle {
   padding-left: 10px;
-  padding-top: 10px;
   font-size: 38px;
+  color: #d1bea3;
+  text-decoration: none;
+}
+
+/* hover effect for novel sips title in nav bar */
+.pgtitle:hover {
+  color: #dfdad2;
+  text-decoration: none;
+}
+
+/* positioning for novel sips title in nav bar */
+.headertitle {
+  padding-top: 8px;
 }
 
 header {
+  top: 0;
+  height: 48px;
   background-color: #5f351b;
   color: #d1bea3;
   padding-bottom: 16px;
   border-bottom: solid 3px #d1bea3;
+  position: fixed;
+  width: 100%;
+}
+
+/* positioning for nav bar links */
+.navbarlinks {
+  margin-top: -36px;
+  /* padding-right: 8%; */
+  width: 93.5%;
+
+}
+
+/* styling for nav bar links */
+li {
+  list-style: none;
+  font-size: 25px;
+  text-decoration: none;
+  color: #d1bea3;
+  display: inline;
+  padding-right: 15px;
+}
+
+li a {
+  text-decoration: none;
+  color: #d1bea3;
+}
+
+li a:hover {
+  color: #dfdad2;
+}
+
+
+footer {
+  background-color: #5f351b;
+  color: #d1bea3;
+  border-top: solid 1px #d1bea3;
+  width: 100%;
+  height: 30px;
+  position: fixed;
+  bottom: 0;
+}
+
+.footerp {
+  color: #d1bea3;
+  text-align: center;
+  font-family: dancing script;
+  font-size: 20px;
+  padding-top: 3px;
+}
+
+/* hero img on main pg and other pgs */
+.heroimg {
+  height: 660px;
+  margin-top: 61.5px;
+  width: 50%;
+  margin-left: 50%;
+}
+
+.heroimghomepg {
+  height: 100%;
+  width: 50%;
+  margin-top: -20px;
+  margin-left: 50%;
+  position: fixed;
+}
+
+.homepgcontainer {
+  margin-top: 660px;
+  margin-bottom: 60px;
+}
+
+/* subtitle paragraph on home pg */
+.subtitle-p {
+  width: 50%;
+  /* font-family: Arial, Helvetica, sans-serif; */
+  font-size: 20px;
+  padding-top: 8px;
+  padding-bottom: 18px;
+  color: #d1bea3;
+  text-align: center;
+}
+
+/* paragraph intro on home pg */
+.intro-subtitle {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 40%;
+  margin-left: 4.25%;
+  margin-right: 5%;
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  border: #d1bea3 1px solid;
+  border-radius: 15px 15px;
+  color: #d1bea3;
+  background-color: #5f351b;
+}
+
+.introstatementtop {
+  font-family: dancing script;
+  font-size: 30px;
+  color: rgb(222, 94, 47);
+}
+
+.fa-solid {
+  color: #a2704f;
+}
+
+.introbasic {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #d1bea3;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.introstatements {
+  font-family: dancing script;
+  font-size: 26px;
+  color: rgb(222, 94, 47);
+}
+
+/* styling for profile and main pg title */
+
+/* hero img on profile pg */
+.profileheroimg {
+  height: 100%;
+  width: 50%;
+  margin-top: -26px;
+  margin-left: 50%;
+  position: fixed;
+}
+
+.profilesubtitle {
+  margin-top: 90px;
+  color: #5f351b;
+  font-size: 32px;
+  width: 100%;
+  text-align: center;
+}
+
+.favoritescontainer {
+  margin-top: 20px;
+  width: 80%;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 15px 15px;
+  padding-bottom: 8px;
+}
+
+/* section title "fave books and drinks" */
+.favesectiontitle {
+  color: #d1bea3;
+  font-size: 26px;
+  width: 70%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* title label for fave books and drinks */
+.favebookname,
+.favedrinkname {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #dfdad2;
+  padding-bottom: 10px;
+}
+
+.faveinputtitle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.faveform-input {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.favebtncontainer {
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .subtitle,
-.logintitle,
-.signuptitle,
 .profilepgtitle {
-  margin-top: -600px;
-  color: #d1bea3;
+  margin-top: -575px;
+  color: #5f351b;
   font-size: 32px;
   width: 50%;
   text-align: center;
 }
 
-.subtitle a {
+/* styling for sign up and login pg title */
+.logintitle,
+.signuptitle {
   color: #d1bea3;
-  text-decoration: none;
-}
-
-.subtitle a:hover {
-  color: rgb(222, 94, 47);
-}
-
-.subtitle-p {
-  width: 50%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  padding-top: 18px;
-  color: #dfdad2;
+  font-size: 32px;
   text-align: center;
+
 }
 
-.heroimg {
-  height: 620px;
+.loginsignup-card {
+  margin-top: 650px;
+}
+
+.loginsignup-card .heroimg {
+  height: 100%;
   width: 50%;
-  object-fit: fit;
+  margin-top: -11px;
   margin-left: 50%;
-  /* border-left: 1px solid #d1bea3; */
-  /* border-bottom: 1px solid #d1bea3; */
+  position: fixed;
 }
 
-/* log in + sign up button placement on nav bar */
-.loginsignupbutton {
-  margin-top: -35px;
-  margin-left: 89.5%;
-}
-
-/* bookshelf button placement on navbar when signed in */
-.bookshelf {
-  margin-top: -30px;
-  /* margin right placement needs to be checked once page is functional  */
-  margin-right: 30px;
-}
-
-/* log out button placement on navbar when signed in */
-#logout {
-  margin-top: -30px;
-  /* margin right placement needs to be checked once page is functional  */
-  margin-right: 20px;
+.logincontainer,
+.signupcontainer {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  width: 40%;
+  border-radius: 15px 15px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 /* button styling */
 .login,
 .signup,
-.bookshelf,
 .getbooks,
-.loginbtn,
+.login-btn,
+.btn-danger,
+.deleteBtn,
 .signupbtn,
-#logout {
+.submitbtn,
+.favoritebtn,
+#logout,
+.createbtn,
+.loginhomebtn {
   background-color: rgb(222, 94, 47);
   color: #dfdad2;
   font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
   border-radius: 10px 10px;
   padding: 7px 7px;
   border: 1px solid #dfdad2;
+}
+
+/* log out button in nav bar if logged in */
+.logoutBtn {
+  padding-left: 94%;
+  margin-top: -2.3%;
+}
+
+/* log in button in nav bar if not logged in */
+.login-navbar-btn {
+  padding-left: 94%;
+  margin-top: -2.5%;
 }
 
 /* button styling link */
 .login a,
 .signup a,
 .bookshelf a,
-#logout a {
+#logout,
+.btn-danger a,
+.deleteBtn,
+.createbtn a,
+.loginhomebtn a {
   color: #dfdad2;
   text-decoration: none;
 }
@@ -111,13 +320,35 @@ header {
 .signup a:hover,
 .bookshelf a:hover,
 .getbooks:hover,
-.loginbtn:hover,
+.login-btn:hover,
 .signupbtn:hover,
-#logout a:hover {
+.btn-danger a:hover,
+.deleteBtn:hover,
+#logout:hover,
+.createbtn a:hover,
+.loginhomebtn a:hover {
   cursor: pointer;
   color: #dfdad2;
   text-decoration: none;
   font-weight: bold;
+}
+
+
+/* log in + sign up button placement on nav bar when not signed in */
+.loginsignupbutton {
+  padding-top: 15px;
+}
+
+/* redirection to signup from login pg */
+.signupredirection,
+.signinredirection {
+  padding-top: 15px;
+}
+
+/* redirection to signup link in paragraph tag */
+.signup-p-link,
+.signin-p-link {
+  color: rgb(222, 94, 47);
 }
 
 /* input styling for get books search */
@@ -132,6 +363,16 @@ header {
 .inputplacement {
   padding-top: 18px;
   width: 50%;
+}
+
+.profileinputplacement {
+  padding-top: 18px;
+  width: 100%;
+}
+
+.recpginputplacement {
+  padding-bottom: 15px;
+  width: 100%;
 }
 
 /* output of books results from search */
@@ -162,6 +403,11 @@ header {
   width: 50%;
 }
 
+.loginform,
+.signupform {
+  padding-top: 10px;
+}
+
 /* label for email and password on login pg */
 .emailtitle,
 .passwordtitle,
@@ -171,15 +417,29 @@ header {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.pwinstructions,
+.emailinstructions,
+.signupredirection-p,
+.signinredirection-p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #d1bea3;
+  font-size: 12px;
+  text-align: center;
+  font-style: italic;
+}
+
 /* input styling for email and pw on login pg */
 .form-input {
   padding: 5px 5px;
   border-radius: 5px;
+  font-size: 14px;
   width: 250px;
   border: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -204,3 +464,456 @@ header, .project:not(:last-child) {
   margin-left: -5px;
 }
 
+/* beginning of styling for about us and contact us pg */
+
+/* hero img on about pg img size and placement */
+.aboutheroimg {
+  margin-top: 65px;
+  width: 35%;
+  height: 100%;
+  position: fixed;
+  margin-right: 65%;
+}
+
+.aboutuscontainer {
+  width: 65%;
+  margin-left: 35%;
+  padding-bottom: 40px;
+}
+
+/* title at the top of the about us pg */
+.aboutpgtitle {
+  padding-top: 32px;
+  color: #5f351b;
+  font-size: 36px;
+  text-align: center;
+}
+
+/* links to go to our individual sections */
+.fourloopinladies a {
+  font-family: dancing script;
+  text-decoration: none;
+  font-size: 24px;
+  color: #dfdad2;
+}
+
+.fourloopinladies a:hover {
+  color: #5f351b;
+}
+
+.contactustitle {
+  padding-bottom: 8px;
+  color: #d1bea3;
+  font-size: 36px;
+  text-align: center;
+}
+
+.aboutpgtitle {
+  padding-top: 80px;
+}
+
+/* subtitle section styling */
+.aboutussection {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 16px;
+  color: #d1bea3;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+/* title styling for our names */
+.nametitle {
+  padding-bottom: 10px;
+  padding-top: 20px;
+  font-size: 32px;
+  color: #dfdad2;
+  font-family: dancing script;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* profile pics in our about us section */
+.profilepic {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 60px 60px;
+  height: 120px;
+  width: 120px;
+}
+
+/* paragraph with our about info */
+.aboutinfo {
+  font-family: Arial, Helvetica, sans-serif;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  padding: 15px 15px;
+  color: #dfdad2;
+  font-size: 16px;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  background-color: #5f351b;
+  border: 1px solid #d1bea3;
+  border-radius: 15px 15px;
+}
+
+/* links to contact us in our about us section */
+.contactlinksgroup {
+  width: 60%;
+  margin-left: 30%;
+}
+
+.pic {
+  margin-top: -95px;
+  margin-right: 42%;
+}
+
+.contactlinks {
+  text-decoration: none;
+  color: #d1bea3;
+  font-family: dancing script;
+  font-size: 20px;
+}
+
+.contactlinks:hover {
+  color: #dfdad2;
+}
+
+/* container with hero img and contact form on contact pg */
+.contactuscontainer {
+  margin-top: 90px;
+  width: 50%;
+}
+
+/* contact card with form */
+.contactuscard {
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  margin-left: 12%;
+  margin-right: 12%;
+  border-radius: 15px 15px;
+  margin-top: 6px;
+  padding-bottom: 8px;
+}
+
+.contactusheroimg {
+  height: 100%;
+  width: 50%;
+  margin-top: -26px;
+  margin-left: 50%;
+  position: fixed;
+}
+
+/* input form group on contact us pg */
+.contactform {
+  padding-top: 8px;
+  width: 100%;
+}
+
+/* title for user name and phone */
+.nameinputtitle,
+.phonetitle {
+  font-size: 18px;
+  color: #dfdad2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* user input field */
+.user-input {
+  width: 400px;
+  height: 150px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+
+/* beginning of drinks page styling */
+
+/* pg title on drinks page */
+.drinkstitle {
+  padding-top: 90px;
+  font-family: dancing script;
+  color: #5f351b;
+  font-size: 40px;
+  width: 45%;
+  text-align: center;
+}
+
+/* container on the left with title and search */
+.searchdrinktitle {
+  width: 50%;
+  padding-top: 10px;
+  color: #d1bea3;
+}
+
+.drinks-form-input {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.drinksearchcontainer {
+  width: 35%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #5f351b;
+  border: 1px solid #d1bea3;
+  border-radius: 15px 15px;
+}
+
+/* container that contains carousel */
+.drinkscontainer {
+  margin-top:80px;
+  border-radius: 15px 15px;
+}
+
+/* container with the carousel */
+.carouselcontainer {
+  width: 60%;
+  height: 200px;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding-bottom: 40px;
+}
+
+/* carousel img */
+.drinkimg {
+  height: 400px;
+  width: 100%;
+  border-radius: 15px 15px;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 400px;
+}
+
+.ourfavoritedrinkstitle {
+  font-size: 36px;
+  color: #d1bea3;
+}
+
+/* drink title in carousel */
+.carouseldrinktitle {
+  font-family: dancing script;
+  font-size: 26px;
+}
+
+/* caption under carousel img */
+.carousel-caption {
+  font-size: 12px;
+  font-family: arial;
+  margin-left: -20%;
+  margin-right: -20%;
+  height: 100px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* button for scroll to the top to the screen function */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  left: 16px;
+  z-index: 99;
+  font-size: 14px;
+  border: 1px solid #dfdad2;
+  outline: none;
+  background-color: rgb(222, 94, 47);
+  color: #dfdad2;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+/* top to screen button on contact pg */
+#aboutusmyBtn {
+  display: none;
+  position: fixed;
+  bottom: 38px;
+  right: 16px;
+  z-index: 99;
+  font-size: 14px;
+  border: 1px solid #dfdad2;
+  outline: none;
+  background-color: rgb(222, 94, 47);
+  color: #dfdad2;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  cursor: pointer;
+  color: #dfdad2;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* beginning of css for recommendations page */
+.recpgtitle {
+  font-family: dancing script;
+  font-size: 36px;
+  color: #5f351b;
+  padding-bottom: 10px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.recommendationcard {
+  width: 80%;
+  color: #d1bea3;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  border-radius: 15px 15px;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bookreccard {
+  height: 100%;
+  width: 35%;
+  margin-right: 50%;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.drinkreccard {
+  margin-left: 50%;
+  margin-top: -33%;
+  width: 35%;
+  padding-bottom: 15px;
+  height: 100%;
+  padding-top: 15px;
+}
+
+.booktitle {
+  font-family: dancing script;
+  font-size: 36px;
+  color: #d1bea3;
+  width: 100%;
+  padding-bottom: 5px;
+}
+
+.bookauthor {
+  font-size: 28px;
+  padding-bottom: 15px;
+  color: #dfdad2;
+}
+
+.drinktitlecard {
+  font-family: dancing script;
+  font-size: 28px;
+  color: #d1bea3;
+  padding-bottom: 5px;
+}
+
+.drinkdescriptioncard {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dfdad2;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.bookimg {
+  height: 100%;
+  /* width: 100%; */
+  object-fit: fit;
+  /* border-radius: 15px 15px; */
+  /* border: 1px solid #dfdad2; */
+  height: 300px;
+  width: 150px;
+}
+
+.drink-img {
+  height: 100%;
+  width: 100%;
+  object-fit: fit;
+  border-radius: 15px 15px;
+  border: 1px solid #dfdad2;
+  height: 250px;
+  width: 250px;
+}
+
+.profilecontainer {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
+.profilepgsearch {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dfdad2;
+  font-size: 16px;
+  padding-bottom: 7px;
+}
+
+.contentlabel {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dfdad2;
+  font-size: 16px;
+}
+
+.content-label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.favecomment-form-input {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  height: 50px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.createbtn {
+  margin-bottom: 10px;
+}
+
+.editdlt-comments {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 80px;
+  font-size: 18px;
+  color: #dfdad2;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  margin-left: 23%;
+  margin-right: 25%;
+  border-radius: 15px 15px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.reviewstitle {
+  text-align: center;
+  font-size: 20px;
+  font-size: 30px;
+  color: #d1bea3;
+  font-family: dancing script;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.editdlt-btn {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}

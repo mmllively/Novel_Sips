@@ -4,9 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Novel Sips</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   {{!-- google fonts stylesheet --}}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
   {{!-- font awesome stylesheet --}}
@@ -16,7 +15,8 @@
 <body>
   {{!-- header --}}
   <header>
-    <h1 class="pgtitle">Novel Sips
+    <h1 class="headertitle">
+      <a class="pgtitle" href="/">Novel Sips</a>
       <i class="fa fa-coffee" style="font-size:36px"></i>
     </h1>
 
@@ -24,39 +24,33 @@
     <nav>
       <ul>
 
+        {{!-- nav bar links --}}
+        <nav class="navbarlinks" align="right">
+
+          <li><a href="/">Home</a></li>
+          <li><a href="drinks">Drinks</a></li>
+          <li><a href="/about-us">About Us</a></li>
+          <li><a href="/profile">My BookShelf</a></li>
+
+        </nav>
+
+        <div class="login-navbar-btn">
+          <button class="loginhomebtn"><a href="/login">Log In</a></button>
+        </div>
+
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
 
-        {{!-- bookshelf button --}}
-        <button class="bookshelf">
-          <a href="/profile">My Book Shelf</a>
-        </button>
+        <div class="logoutBtn"><button class="logout" id="logout">Logout</button></div>
 
-        {{!-- Logout button --}}
-        <button class="no-button" id="logout">Log Out</button>
 
         <!-- logout link here -->
         {{else}}
 
-        {{!-- log in and sign up button --}}
-        <div class="loginsignupbutton">
-          <button class="login"><a href="/login">Log In</a></button>
-          <button class="signup"><a href="/signup">Sign Up</a></button>
-        </div>
-
         {{/if}}
 
-
-        <button class ="about-us bookshelf">
-          <a href="/about-us">About Us</a>
-        </button>
-
-        <button class = "contact-us bookshelf ">
-          <a href="/contact-us">Contact Us</a>
-        </button>
-
       </ul>
-    </nav>
+
 
   </header>
 
@@ -65,18 +59,19 @@
     {{{ body }}}
   </main>
 
+  {{!-- back to top button --}}
+  <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+
   {{!-- footer --}}
   <footer>
-
+    <p class="footerp">Created by the Four Loopin' Ladies ©</p>
   </footer>
- 
-{{!-- SCRIPTS --}}
-<script src="/js/logout.js"></script>
-<script src="/js/login.js"></script>
-<script src = "/js/index.js"></script>
 
+  <script src="/js/logout.js"></script>
+  <script src="/js/login.js"></script>
+  <script src="/js/main.js"></script>
 </body>
 
+
 </html>
-
-

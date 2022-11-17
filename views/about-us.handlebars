@@ -1,47 +1,84 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About Us</title>
 </head>
-<header>About Us</header>
+
+
 <body>
-    
+
     <main>
+        {{!-- hero img --}}
+        <div class="abtheroimg">
+            <img class="aboutheroimg"
+                src="https://images.pexels.com/photos/9893354/pexels-photo-9893354.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+        </div>
 
         <section class="aboutuscontainer">
-            <h2 class="abouttitle">About Us</h2>
-            <p class="aboutussection">
-                We are the "<i>For Loopin' Ladies</i>"!<br>
+            {{!-- pg title --}}
+            <h2 class="aboutpgtitle">About Us</h2>
+            {{!-- subtitle paragraph section --}}
+            <section class="aboutussection">
+                We are the "<i>Four Loopin' Ladies</i>"!<br>
+                <br>
+                <p class="fourloopinladies">
+                    <a href="#khris" title="See Khris's about info.">Khris Soto</a> &nbsp;&nbsp;&nbsp;
+                    <a href="#maggie" title="See Maggie's about info.">Maggie Lively</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#karina" title="See Karina's about info.">Karina Drummond</a>&nbsp;&nbsp;&nbsp;
+                    <a href="#iia" title="See Iia's about info.">Iia Wolak</a>
+                </p>
                 <br>
                 We met while enrolled in the Full-Stack Web Development Coding
-                Bootcamp at UCF and were tasked together to develop this website.
-            </p>
-
-
-        <h3 class="khristitle">Khris Soto</h3>
-            <div class="pic"><img class="maggiepic" src="./assets/Untitled_design_2.png"></div>
-            <p class="khrisabout">
-                Fill in here<br>
+                Bootcamp at UCF, and were tasked together to develop this website.<br>
                 <br>
-               Fill in here <br>
+                This project took a lot of time and dedication, and we will keep working
+                on it to improve it's functionality and appearance with the skills we will
+                continue to learn and develop while enrolled in the Coding Bootcamp.
+            </section>
+
+            {{!-- khris's about section --}}
+            <section class="aboutinfo" id="khris">
+                <section class="contactlinksgroup">
+                    <p class="nametitle">Khris Soto</p>
+                    {{!-- contact links --}}
+                    <a class="contactlinks" title="Send me an email!" href="mailto: khris.soto@live.com">Email</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Connect with me on LinkedIn!"
+                        href="https://linkedin.com/">LinkedIn</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Check out my GitHub!"
+                        href="https://github.com/ksoto18">GitHub</a>
+                </section>
+                {{!-- picture --}}
+                <div class="pic" align="center"><img class="profilepic"
+                        src="https://avatars.githubusercontent.com/u/113643158?v=4"></div>
+                {{!-- about paragraph --}}
+                Khris S. has worked over 10 years in the service industry. Most recently she had the pleasure of
+                running a $10MiLL restaurant for the past 3 years and serve as an International Service Talent Staff
+                that helps
+                open new restaurant in other countries.<br>
                 <br>
+                Khris has allways had a passion for Computers and Technology which motivated her to persue a career
+                change. She found the UCF Coding Bootcamp to be a good fit.
+                She hopes to develop a simple but addicting video game app with her friends and aspires to be a Web
+                Developer in the near future. <br>
+                <br>
+            </section>
 
-                <a class="mllinks" href="mailto: maggie.lively@gmail.com">Email Me</a>
-                &nbsp;&nbsp;
-                <!-- <a class="mllinks" href="">LinkedIn</a>
-                &nbsp;&nbsp; -->
-                <a class="mllinks" href="https://github.com/mmllively">GitHub</a>
-            </p>
-
-
-
-
-            <h3 class="maggietitle">Maggie Lively</h3>
-            <div class="pic"><img class="maggiepic" src="./assets/Untitled_design_2.png"></div>
-            <p class="maggieabout">
+            {{!-- maggie's about section --}}
+            <section class="aboutinfo" id="maggie">
+                <section class="contactlinksgroup">
+                    <p class="nametitle">Maggie Lively</p>
+                    {{!-- contact links --}}
+                    <a class="contactlinks" title="Send me an email!" href="mailto: maggie.lively@gmail.com">Email</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Connect with me on LinkedIn!" href="">LinkedIn</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Check out my GitHub!"
+                        href="https://github.com/mmllively">GitHub</a>
+                </section>
+                {{!-- picture --}}
+                <div class="pic" align="center"><img class="profilepic"
+                        src="https://avatars.githubusercontent.com/u/112098717?v=4"></div>
+                {{!-- about paragraph --}}
                 Maggie Lively recently relocated to Orlando from the Washington D.C. area where
                 she owned a yoga studio. Due to the Covid-19 Pandemic, she spent the last couple
                 of years teaching online learning more about dynamic websites and interactive
@@ -53,17 +90,25 @@
                 and user-friendly. She looks forward to learning more about web-development throughout
                 the course and beyond.<br>
                 <br>
+            </section>
 
-                <a class="mllinks" href="mailto: maggie.lively@gmail.com">Email Me</a>
-                &nbsp;&nbsp;
-                <!-- <a class="mllinks" href="">LinkedIn</a>
-                &nbsp;&nbsp; -->
-                <a class="mllinks" href="https://github.com/mmllively">GitHub</a>
-            </p>
-
-            <h3 class="karinatitle">Karina Drummond</h3>
-            <div class="pic"><img class="karinapic" src="./assets/karinapic.jpg"></div>
-            <p class="karinaabout">
+            {{!-- karina's about section --}}
+            <section class="aboutinfo" id="karina">
+                <section class="contactlinksgroup">
+                    <p class="nametitle">Karina Drummond</p>
+                    <a class="contactlinks" title="Send me an email!" href="mailto: k.drummond528@gmail.com">Email
+                        Me</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Connect with me on LinkedIn!"
+                        href="https://www.linkedin.com/in/karinadrummond/">LinkedIn</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Check out my GitHub!"
+                        href="https://github.com/kdrummond528">GitHub</a>
+                </section>
+                {{!-- picture --}}
+                <div class="pic"><img class="profilepic" src="https://avatars.githubusercontent.com/u/48260505?v=4">
+                </div>
+                {{!-- about paragraph --}}
                 Karina is a stay-at-home mom to four children, and wife to an active-duty Sailor.
                 She is a first-generation Dominican-American, born and raised in Miami. Before the Navy
                 relocated her family to San Diego in 2018, She lived in Orlando for 12 years and completed
@@ -74,40 +119,39 @@
                 enjoying every moment of it, and looking forward to completing the program and beginning
                 her career in web development!<br>
                 <br>
+            </section>
 
-                <a class="kdlinks" href="mailto: k.drummond528@gmail.com">Email Me</a>
-                &nbsp;&nbsp;
-                <a class="kdlinks" href="https://www.linkedin.com/in/karinadrummond/">LinkedIn</a>
-                &nbsp;&nbsp;
-                <a class="kdlinks" href="https://github.com/kdrummond528">GitHub</a>
-            </p>
-
-            <h3 class="iiatitle"><i>Iia Wolak</i></h3>
-            <div class="pic"><img class="iiapic" src="./assets/Iia.png"></div>
-            <p class="iiaabout">
-                Iia Wolak also recently relocated to Orlando from Tallahassee, Florida.
-                She received her Bachelor's Degree in Linguistics and Mandarin from the University
-                of Florida. After college, Iia worked in a local coffee shop for three and a half years, creating
-                latte art and smiles for a large customer base of Tallahassee locals.<br>
-                <br>
-                Iia decided to enroll in the UCF Coding bootcamp to change her career path and mix
-                her love for languages with web development. Her dream is to create a language learning app!
-                In her free time, Iia loves to read really long books, study Mandarin and Japanese, and
-                visit local cafes and breweries.<br>
-                <br>
-
-                <a class="iwlinks" href="mailto: wolaki96@gmail.com">Email Me</a>
-                &nbsp;&nbsp;
-                <!-- <a class="iwlinks" href="">LinkedIn</a>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
-                <a class="iwlinks" href="https://github.com/wolaki96">GitHub</a>
-            </p>
+            {{!-- iia's about section --}}
+            <section class="aboutinfo" id="iia">
+                <section class="contactlinksgroup">
+                    <p class="nametitle">Iia Wolak</p>
+                    {{!-- contact links --}}
+                    <a class="contactlinks" title="Send me an email!" href="mailto: wolaki96@gmail.com">Email Me</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" title="Connect with me on LinkedIn!" target="_blank" href="">LinkedIn</a>
+                    &nbsp;&nbsp;
+                    <a class="contactlinks" target="_blank" title="Check out my GitHub!"
+                        href="https://github.com/wolaki96">GitHub</a>
+                </section>
+                {{!-- picture --}}
+                <div class="pic" align="center"><img class="profilepic"
+                        src="https://avatars.githubusercontent.com/u/113065214?v=4"></div>
+                {{!-- about paragraph --}}
+                <p>Iia Wolak also recently relocated to Orlando from Tallahassee, Florida.
+                    She received her Bachelor's Degree in Linguistics and Mandarin from the University
+                    of Florida. After college, Iia worked in a local coffee shop for three and a half years, creating
+                    latte art and smiles for a large customer base of Tallahassee locals.<br>
+                    <br>
+                    Iia decided to enroll in the UCF Coding bootcamp to change her career path and mix
+                    her love for languages with web development. Her dream is to create a language learning app!
+                    In her free time, Iia loves to read really long books, study Mandarin and Japanese, and
+                    visit local cafes and breweries.
+                </p>
+            </section>
 
         </section>
 
-        <!-- footer -->
-        <footer></footer>
-
     </main>
 </body>
+
 </html>

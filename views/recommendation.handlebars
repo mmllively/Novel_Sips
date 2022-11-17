@@ -1,0 +1,39 @@
+<head>
+  <link rel="stylesheet" href="/css/style.css">
+  <title>Novel Sips | Drink Recommendations</title>
+</head>
+
+<body>
+
+  <h2 class="recpgtitle">Your Recommendation:</h2>
+
+{{!-- get books search input and button --}}
+  <div class="recpginputplacement" align="center">
+    <p class="profilepgsearch">Search for another book and drink recommendation:</p>
+    <input class="getbooksinput" id="input" placeholder="Enter a book title...">
+    <button class="getbooks" id="searchBtn">Search</button>
+  </div>
+
+  <div class="recommendationcard" align="center">
+    {{!-- book title, author, and img --}}
+    <section class="bookreccard">
+      <div class="booktitle">{{book.title}}</div>
+      <div class="bookauthor">{{book.author}}</div>
+      <div class="bookimg">
+        <img src="http://covers.openlibrary.org/b/isbn/{{book.image}}-M.jpg"></div>
+    </div>
+    </section>
+
+    {{!-- drink name, description, and img --}}
+    <section class="drinkreccard" align="center">
+      <div class="drinktitlecard">{{drink.name}}</div>
+      <div class="drinkdescriptioncard">{{drink.description}}</div>
+      <img class="drink-img" src="/images/{{drink.filename}}">
+    </section>
+
+  </div>
+
+</body>
+
+<script src="/js/index.js"></script>
+              

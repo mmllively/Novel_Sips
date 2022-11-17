@@ -1,75 +1,85 @@
+<head>
+  <title>Novel Sips | My Profile</title>
+</head>
 
-<div class="row">
-  <div class="col-auto">
-    <h1>Welcome to your Book Shelf!</h1>
-  </div>
-</div>
+{{!-- hero img --}}
+{{!-- <img class="profileheroimg"
+  src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
+--}}
 
-<section>
-  <div class="row mt-4">
-    <div class="col-md-6">
-      <h3>Favorite Books and Drinks</h3>
+<section class="profilecontainer" align="center">
+  {{!-- subtitle and paragraph --}}
+  <h2 class="profilesubtitle">Welcome to your Book Shelf!</h2>
 
-      <div class="book-card">
-         {{#each books as |book|}}
-        <p>{{book.book_title}}</p>
-        <p>{{book.description}}</p>
-        {{/each}}
-      </div>
-
-</section>
-
-<section>
-<form class="form new-book-form">
-  <div class="form-group">
-    <label for="book-title">Book Title:</label>
-    <input class="form-input" type="text" id="book-title" name="book-title" placeholder="How the Grinch Stole Christmas" />
-  </div>
-  <div class="form-group">
-    <label for="book-description">Comments:</label>
-    <textarea class="form-input" id="book-description" name="book-description" placeholder="This was good with hot chocolate!"></textarea>
-
-  </div>
-  <div class="form-group">
-    <button type="submit" class="btn btn-primary">Create</button>
-  </div>
-</form>
-</div>
-</section>
-
-<section>
- {{!-- get books search input and button --}}
-  <div class="inputplacement" align="center">
-    <input class="getbooksinput" id="input" placeholder="Search for a title...">
-    <button class="getbooks" id="searchBtn">Get Books</button>
-
-    {{!-- create a container for books output --}}
-    {{!-- create cards for each individual book --}}
-    <card class="booksoutput">
+  {{!-- get books search input and button --}}
+  <div class="profileinputplacement" align="center">
+    <p class="profilepgsearch">Search for a book recommendation:</p>
+    <input class="getbooksinput" id="input" placeholder="Enter a book title...">
+    <button class="getbooks" id="searchBtn">Search</button>
+    {{!-- <card class="booksoutput">
       <div class="output" id="output"></div>
-    </card>
+    </card> --}}
+  </div>
+
+
+  <div class="favoritescontainer" align="center">
+    <h3 class="favesectiontitle">Create a comment for you favorite recommendations.</h3>
+
+
+    <section>
+      <form class="form new-book-form">
+
+        <div class="form-group">
+          <div class="content-label"><label for="book-description" class="contentlabel">My comments:</label></div>
+          <input type="text" class="favecomment-form-input" id="content-description" name="book-description"
+            placeholder="This read was fire with hot chocolate!">
+
+        </div>
+        <div class="form-group">
+          <button type="submit" class="createbtn" id="contentBtn">Create</button>
+        </div>
+
+      </form>
+    </section>
+
+  </div>
+
+
+
 </section>
 
-{{#if books.length}}
+<section class="editdlt-comments" align="center">
+<p class="reviewstitle">Reviews:</p>
+
+{{#if comments.length}}
 <div class="col-md-6 post-list">
-  {{#each book as |book|}}
+  {{#each comments as |comment|}}
   <div class="row mb-2">
     <div class="col-md-8">
-      <h4><a href="/all-books/{{book.user_id}}">{{book.book_title}}</a></h4>
+      <p>{{comment.content}}</p>
     </div>
-    <button class="btn btn-sm btn-danger"><a href="/edit/{{book.id}}">EDIT</a></button>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" id="data-id {{book.id}}">DELETE</button>
-    </div>
+   
+  <div class="editdlt-btn">
+   
+    <button id = "edit-btn" class="btn btn-sm btn-danger">
+      <a href="/api/comments/{{comment.id}}">EDIT</a></button>
+
+      <button class="btn btn-sm btn-danger deleteBtn" data-del="{{comment.id}}">DELETE</button>
+    
   </div>
   {{/each}}
 </div>
 {{/if}}
-</div>
 
-  {{#if loggedIn}}
+</section>
+
+
+
+  {{#if logged_in}}
   <section class="flex-row justify-center">
-   <p>{{drinks.subject}}</p>
+   <p >{{drink.name}}</p>
+   <p >{{drink.description}}</p>
+   {{!-- <button class="getdrinks" id="drinkBtn">Drink Generator</button> --}}
   </section>
 </section>
 
@@ -80,10 +90,9 @@
 
  
 
-<script src="/js/newBook.js"></script>
-<script src="/js/profile.js"></script>
+{{!-- <script src="/js/newBook.js"></script> --}}
 <script src = "/js/index.js"></script>
-<script src = "/js/login.js"></script>
+<script src = "/js/comment.js"></script>
 
 
 
