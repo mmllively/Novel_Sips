@@ -103,12 +103,6 @@ footer {
   margin-bottom: 60px;
 }
 
-/* margin-top: 61.5px;
-width: 35%;
-height: 100%;
-position: fixed;
-margin-left: 65%; */
-
 /* subtitle paragraph on home pg */
 .subtitle-p {
   width: 50%;
@@ -163,6 +157,49 @@ margin-left: 65%; */
 }
 
 /* styling for profile and main pg title */
+
+.profilecontainer {}
+
+/* hero img on profile pg */
+.profileheroimg {
+  height: 100%;
+  width: 50%;
+  margin-top: -26px;
+  margin-left: 50%;
+  position: fixed;
+}
+
+.profilesubtitle {
+  margin-top: 90px;
+  color: #5f351b;
+  font-size: 32px;
+  width: 50%;
+  text-align: center;
+}
+
+/* section title "fave books and drinks" */
+.favesectiontitle {
+  color: #d1bea3;
+  font-size: 26px;
+  width: 50%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* title label for fave books and drinks */
+.favebookname,
+.favedrinkname {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #dfdad2;
+  padding-bottom: 10px;
+}
+
+.faveinputtitle {
+  padding-bottom: 10px;
+}
+
+
 .subtitle,
 .profilepgtitle {
   margin-top: -575px;
@@ -400,10 +437,6 @@ header,
 }
 
 /* links to go to our individual sections */
-.fourloopinladies {
-  /* border-bottom: 1px solid #5f351b; */
-}
-
 .fourloopinladies a {
   font-family: dancing script;
   text-decoration: none;
@@ -543,30 +576,6 @@ header,
   text-align: center;
   border-radius: 5px;
   border: none;
-}
-
-/* beginning of css styling for profile pg */
-
-/* section title "fave books and drinks" */
-.favesectiontitle {
-  color: #d1bea3;
-  font-size: 26px;
-  width: 50%;
-  text-align: center;
-  padding-top: 20px;
-}
-
-/* title label for fave books and drinks */
-.favebookname,
-.favedrinkname {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #dfdad2;
-  padding-bottom: 10px;
-}
-
-.faveinputtitle {
-  padding-bottom: 10px;
 }
 
 /* beginning of drinks page styling */

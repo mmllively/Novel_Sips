@@ -1,58 +1,63 @@
-<div>
-  {{!-- hero img --}}
-  <img class="heroimg"
-    src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
+<head>
+  <title>Novel Sips | My Profile</title>
+</head>
 
+{{!-- hero img --}}
+<img class="profileheroimg"
+  src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
+
+<section class="profilecontainer">
   {{!-- subtitle and paragraph --}}
-  <h2 class="subtitle">Welcome to your Book Shelf!</h2>
-</div>
+  <h2 class="profilesubtitle">Welcome to your Book Shelf!</h2>
 
-{{!-- get books search input and button --}}
-<div class="inputplacement" align="center">
-  <input class="getbooksinput" id="input" placeholder="Enter a book title...">
-  <button class="getbooks" id="searchBtn">Search</button>
+  {{!-- get books search input and button --}}
+  <div class="inputplacement" align="center">
+    <input class="getbooksinput" id="input" placeholder="Enter a book title...">
+    <button class="getbooks" id="searchBtn">Search</button>
 
-  <div class="favoritescontainer">
-    <h3 class="favesectiontitle">Favorite Books and Drinks</h3>
+    <div class="favoritescontainer">
+      <h3 class="favesectiontitle">Favorite Books and Drinks</h3>
 
-    <form class="form new-project-form">
+      <form class="form new-project-form">
 
-      <div class="form-group" align="center">
-        {{!-- fave book title input field --}}
-        <div class="faveinputtitle"><label class="favebookname" for="post-name">Book Title:</label></div>
-        <div><input class="form-input" type="text" id="post-name" name="post-name" /></div>
-      </div>
+        <div class="form-group" align="center">
+          {{!-- fave book title input field --}}
+          <div class="faveinputtitle"><label class="favebookname" for="post-name">Book Title:</label></div>
+          <div><input class="form-input" type="text" id="post-name" name="post-name" /></div>
+        </div>
 
-      <div class="form-group" align="center">
-        <div class="faveinputtitle"><label class="favedrinkname" for="project-desc">Drink Name:</label></div>
-        <div><textarea class="form-input" id="project-desc" name="project-desc"></textarea></div>
-      </div>
+        <div class="form-group" align="center">
+          <div class="faveinputtitle"><label class="favedrinkname" for="project-desc">Drink Name:</label></div>
+          <div><textarea class="form-input" id="project-desc" name="project-desc"></textarea></div>
+        </div>
 
-      <div class="form-group" align="center">
-        <button type="submit" class="favoritebtn">Add to favorites!</button>
-      </div>
+        <div class="form-group" align="center">
+          <button type="submit" class="favoritebtn">Add to favorites!</button>
+        </div>
 
-    </form>
+      </form>
 
-  </div>
-
-  {{#if posts.length}}
-  <div class="col-md-6 post-list">
-    <h3>Current Blog Posts:</h3>
-
-    {{#each posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/all-posts/{{post.author}}">{{post.title}}</a></h4>
-      </div>
-      <button class="btn btn-sm btn-danger"><a href="/edit/{{post.id}}">EDIT</a></button>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" id="data-id {{post.id}}">DELETE</button>
-      </div>
     </div>
-    {{/each}}
   </div>
-  {{/if}}
+</section>
+
+{{#if posts.length}}
+<div class="col-md-6 post-list">
+  <h3>Current Blog Posts:</h3>
+
+  {{#each posts as |post|}}
+  <div class="row mb-2">
+    <div class="col-md-8">
+      <h4><a href="/all-posts/{{post.author}}">{{post.title}}</a></h4>
+    </div>
+    <button class="btn btn-sm btn-danger"><a href="/edit/{{post.id}}">EDIT</a></button>
+    <div class="col-md-4">
+      <button class="btn btn-sm btn-danger" id="data-id {{post.id}}">DELETE</button>
+    </div>
+  </div>
+  {{/each}}
+</div>
+{{/if}}
 </div>
 
 
