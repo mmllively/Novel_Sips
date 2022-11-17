@@ -1,3 +1,5 @@
+
+
 * {
   margin: 0;
   padding: 0;
@@ -41,7 +43,9 @@ header {
 /* positioning for nav bar links */
 .navbarlinks {
   margin-top: -36px;
-  padding-right: 8%;
+  /* padding-right: 8%; */
+  width:92%;
+  
 }
 
 /* styling for nav bar links */
@@ -103,12 +107,6 @@ footer {
   margin-bottom: 60px;
 }
 
-/* margin-top: 61.5px;
-width: 35%;
-height: 100%;
-position: fixed;
-margin-left: 65%; */
-
 /* subtitle paragraph on home pg */
 .subtitle-p {
   width: 50%;
@@ -163,6 +161,77 @@ margin-left: 65%; */
 }
 
 /* styling for profile and main pg title */
+
+/* .profilecontainer {
+  
+} */
+
+/* hero img on profile pg */
+.profileheroimg {
+  height: 100%;
+  width: 50%;
+  margin-top: -26px;
+  margin-left: 50%;
+  position: fixed;
+}
+
+.profilesubtitle {
+  margin-top: 90px;
+  color: #5f351b;
+  font-size: 32px;
+  width: 50%;
+  text-align: center;
+}
+
+.favoritescontainer {
+  margin-top: 20px;
+  width: 70%;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  margin-left: 12%;
+  margin-right: 12%;
+  border-radius: 15px 15px;
+  padding-bottom: 8px;
+}
+
+/* section title "fave books and drinks" */
+.favesectiontitle {
+  color: #d1bea3;
+  font-size: 26px;
+  width: 70%;
+  text-align: center;
+  padding-top: 20px;
+}
+
+/* title label for fave books and drinks */
+.favebookname,
+.favedrinkname {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+  color: #dfdad2;
+  padding-bottom: 10px;
+}
+
+.faveinputtitle {
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+}
+
+.faveform-input {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.favebtncontainer {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
 .subtitle,
 .profilepgtitle {
   margin-top: -575px;
@@ -205,18 +274,15 @@ margin-left: 65%; */
   margin-right: 5%;
 }
 
-/* bookshelf + logout button placement on navbar when signed in */
-.bookshelf-logoutbtn {
-  margin-top: -35px;
-  margin-left: 88.5%;
-}
+
+
 
 /* button styling */
 .login,
 .signup,
-.bookshelf,
+
 .getbooks,
-.loginbtn,
+.login-btn,
 .signupbtn,
 .submitbtn,
 .favoritebtn,
@@ -229,12 +295,15 @@ margin-left: 65%; */
   padding: 7px 7px;
   border: 1px solid #dfdad2;
 }
-
+.logoutBtn{
+  padding-left: 93%;
+  margin-top: -3%;
+}
 /* button styling link */
 .login a,
 .signup a,
 .bookshelf a,
-#logout a {
+#logout {
   color: #dfdad2;
   text-decoration: none;
 }
@@ -244,9 +313,9 @@ margin-left: 65%; */
 .signup a:hover,
 .bookshelf a:hover,
 .getbooks:hover,
-.loginbtn:hover,
+.login-btn:hover,
 .signupbtn:hover,
-#logout a:hover {
+#logout:hover {
   cursor: pointer;
   color: #dfdad2;
   text-decoration: none;
@@ -400,10 +469,6 @@ header,
 }
 
 /* links to go to our individual sections */
-.fourloopinladies {
-  /* border-bottom: 1px solid #5f351b; */
-}
-
 .fourloopinladies a {
   font-family: dancing script;
   text-decoration: none;
@@ -545,30 +610,6 @@ header,
   border: none;
 }
 
-/* beginning of css styling for profile pg */
-
-/* section title "fave books and drinks" */
-.favesectiontitle {
-  color: #d1bea3;
-  font-size: 26px;
-  width: 50%;
-  text-align: center;
-  padding-top: 20px;
-}
-
-/* title label for fave books and drinks */
-.favebookname,
-.favedrinkname {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  color: #dfdad2;
-  padding-bottom: 10px;
-}
-
-.faveinputtitle {
-  padding-bottom: 10px;
-}
-
 /* beginning of drinks page styling */
 
 /* pg title on drinks page */
@@ -663,30 +704,57 @@ header,
   font-weight: bold;
 }
 
-
-
 /* testing for card info for books/drinks */
 
-.card{
-  box-shadow: 0 4px 8px 0 rgba(23, 145, 33, 0.2); 
-  padding: 16px;
-  text-align: center;
-  background-color: #6e0707;
+.recommendationcard {
+  margin-top: 100px;
+  width: 80%;
+  color: #d1bea3;
+  border: 1px solid #d1bea3;
+  background-color: #5f351b;
+  border-radius: 15px 15px;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 8px;
+}
+
+.booktitle {
+  padding-top: 10px;
+  font-size: 28px;
+  color: #dfdad2;
+}
+
+.bookauthor {
+  font-size: 24px;
+  padding-bottom: 15px;
+  color: #d1bea3;
+}
+
+.bookimg {
+  height: 150;
+}
+
+.reccard {
+  padding-bottom: 15px;
+  width: 70%;
+
 
 }
-.column {
-  border: 1px solid black;
-  float: left;
-  width: 25%;
-  padding: 0 10px;
+.cardtitle{
+  font-family: Arial, Helvetica, sans-serif;
+  color:#dfdad2;
 }
-.img-card {
+
+.drinkimg, .bookimg{
   height: 100%;
   width: 100%;
   object-fit: fit;
-  margin-left: 50%;
+  border-radius: 15px 15px;
+  border: 1px solid #dfdad2;
 }
+
 .imgcontainer {
   height: 300px;
   width: 300px;
+  padding-bottom: 15px;
 }

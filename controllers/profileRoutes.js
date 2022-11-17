@@ -12,8 +12,6 @@ const getBooks = async function(title){
 }
 
 
-
-
 // GET a Books
 router.get('/:title', withAuth, async (req, res) => {
   console.log("working", req.params.title)
@@ -48,7 +46,7 @@ res.render('recommendation', {book:{
 });
 
 //GET All Comments
-router.get('/comment', withAuth, async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   console.log("working")
   try {
     const commentData = await Comment.findAll();

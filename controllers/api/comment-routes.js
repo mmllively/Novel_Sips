@@ -4,6 +4,19 @@ const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 
+router.get('/:id', async (req, res) => {
+  try {
+    
+    const commentData = await Comment.findByPk(req.params.id);
+
+    const comments = commentData.get({plain:true});
+    res.send('profile', {comments, loggedIn: req.session.logged_in});
+  }catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 router.post('/', withAuth, async (req, res) => {
     try {
       const newComment = await Comment.create({
@@ -44,6 +57,7 @@ router.post('/', withAuth, async (req, res) => {
 });
 
   router.delete('/:id', withAuth,  async (req, res) => {
+    console.log(req.params.id);
     try {
       const commentData = await Comment.destroy({
         where: {

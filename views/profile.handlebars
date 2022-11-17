@@ -1,9 +1,47 @@
 
-<div class="row">
-  <div class="col-auto">
-    <h1>Welcome to your Book Shelf!</h1>
-  </div>
-</div>
+<head>
+  <title>Novel Sips | My Profile</title>
+</head>
+
+{{!-- hero img --}}
+<img class="profileheroimg"
+  src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
+
+<section class="profilecontainer">
+  {{!-- subtitle and paragraph --}}
+  <h2 class="profilesubtitle">Welcome to your Book Shelf!</h2>
+
+  {{!-- get books search input and button --}}
+  <div class="inputplacement" align="center">
+    <input class="getbooksinput" id="input" placeholder="Enter a book title...">
+    <button class="getbooks" id="searchBtn">Search</button>
+
+    <div class="favoritescontainer">
+      <h3 class="favesectiontitle">Favorite Books and Drinks</h3>
+
+      {{!-- fave book title input field --}}
+      <form class="form new-project-form">
+        {{!-- book title label --}}
+        <div class="faveinputtitle">
+          <label class="favebookname" for="post-name">Book Title:</label>
+        </div>
+        {{!-- title search bar --}}
+        <div class="faveforms">
+          <input class="faveform-input" placeholder="Enter a book title" type="text" id="post-name" name="post-name" />
+        </div>
+        {{!-- drink name label --}}
+
+        <div class="faveinputtitle">
+          <label class="favedrinkname" for="project-desc">Drink Name:</label>
+        </div>
+        {{!-- title search bar --}}
+        <div>
+          <input class="faveform-input" placeholder="Enter a drink name" id="project-desc" name="project-desc"></input>
+        </div>
+        {{!-- add to favorites button --}}
+        <div class="favebtncontainer">
+          <button type="submit" class="favoritebtn">Add to favorites!</button>
+        </div>
 
 <section>
   <div class="row mt-4">
@@ -42,24 +80,6 @@
   </div>
 </form>
 </div>
-</section>
-
-<section>
- {{!-- get books search input and button --}}
-  <div class="inputplacement" align="center">
-    <input class="getbooksinput" id="input" placeholder="Search for a title...">
-    <button class="getbooks" id="searchBtn">Find Books</button>
-
-    {{!-- create a container for books output --}}
-    {{!-- create cards for each individual book --}}
-    <card class="booksoutput">
-      <div class="output" id="output"></div>
-    </card>
-</section>
-
-
-
-
 
 
 
@@ -75,7 +95,7 @@
     <button id = "edit-btn" class="btn btn-sm btn-danger"><a href="/api/comments/{{comment.id}}">EDIT</a></button>
     </div>
     <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" id="deleteBtn {{comment.id}}">DELETE</button>
+      <button class="btn btn-sm btn-danger deleteBtn {{comment.id}}">DELETE</button>
     </div>
   </div>
   {{/each}}

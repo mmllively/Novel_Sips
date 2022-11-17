@@ -27,9 +27,9 @@ const commentEditHandler = async (e) =>{
     console.log(content);
     const response = await fetch('/api/comments', {
         method: 'PUT',
-        body: JSON.stringify({
+        body: 
             content,
-        }),
+
         headers: {
             'Content-Type': 'application/json'
         }
@@ -44,6 +44,7 @@ const commentEditHandler = async (e) =>{
 
 
     const delButtonHandler = async (event) => {
+        console.log("deleting")
         if (event.target.hasAttribute('deleteBtn')) {
           const id = event.target.getAttribute('deleteBtn');
       
@@ -54,15 +55,10 @@ const commentEditHandler = async (e) =>{
           if (response.ok) {
             document.location.replace('/profile');
           } else {
-            alert('Failed to delete project');
+            alert('Failed to delete comment');
           }
         }
       };
-
-
-
-
-
 
     
 //content create button
@@ -76,13 +72,10 @@ const editButton = document.getElementById("edit-btn")
 editButton.addEventListener('click',commentEditHandler)
 
 
-delete button
-const deleteButton = document.getElementById("deleteBtn")
+// delete button
+const deleteButton = document.getElementsByClassName("deleteBtn")
 deleteButton.addEventListener('click',delButtonHandler)
 
-// document
-//   .querySelector('#deleteBtn')
-//   .addEventListener('click', delButtonHandler);
 
 
-module.exports = router; 
+

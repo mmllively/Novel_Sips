@@ -421,7 +421,7 @@ const drinkData = [
 },
 {
    name: "Cola",
-    description: "The most classic drink of the all.",
+    description: "The most classic drink of them all.",
     subject: "science fiction",
     filename: "cola.jpg"
 },
