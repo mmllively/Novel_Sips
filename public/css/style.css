@@ -160,10 +160,6 @@ footer {
 
 /* styling for profile and main pg title */
 
-/* .profilecontainer {
-  
-} */
-
 /* hero img on profile pg */
 .profileheroimg {
   height: 100%;
@@ -177,17 +173,17 @@ footer {
   margin-top: 90px;
   color: #5f351b;
   font-size: 32px;
-  width: 50%;
+  width: 100%;
   text-align: center;
 }
 
 .favoritescontainer {
   margin-top: 20px;
-  width: 70%;
+  width: 80%;
   border: 1px solid #d1bea3;
   background-color: #5f351b;
-  margin-left: 12%;
-  margin-right: 12%;
+  margin-left: 10%;
+  margin-right: 10%;
   border-radius: 15px 15px;
   padding-bottom: 8px;
 }
@@ -272,9 +268,6 @@ footer {
   margin-right: 5%;
 }
 
-
-
-
 /* button styling */
 .login,
 .signup,
@@ -284,6 +277,7 @@ footer {
 .submitbtn,
 .favoritebtn,
 #logout,
+.createbtn,
 .loginhomebtn {
   background-color: rgb(222, 94, 47);
   color: #dfdad2;
@@ -311,6 +305,7 @@ footer {
 .signup a,
 .bookshelf a,
 #logout,
+.createbtn a,
 .loginhomebtn a {
   color: #dfdad2;
   text-decoration: none;
@@ -324,6 +319,7 @@ footer {
 .login-btn:hover,
 .signupbtn:hover,
 #logout:hover,
+.createbtn a:hover,
 .loginhomebtn a:hover {
   cursor: pointer;
   color: #dfdad2;
@@ -361,6 +357,11 @@ footer {
 .inputplacement {
   padding-top: 18px;
   width: 50%;
+}
+
+.profileinputplacement {
+  padding-top: 18px;
+  width: 100%;
 }
 
 /* output of books results from search */
@@ -818,4 +819,51 @@ header,
   border: 1px solid #dfdad2;
   height: 250px;
   width: 250px;
+}
+
+.profilecontainer {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 200px;
+}
+
+.profilepgsearch {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dfdad2;
+  font-size: 16px;
+  padding-bottom: 7px;
+}
+
+.contentlabel {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dfdad2;
+  font-size: 16px;
+}
+
+.content-label {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.favecomment-form-input {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  height: 50px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.createbtn {
+  margin-bottom: 10px;
+}
+
+/* none of these are showing */
+.comment-card,
+.commentPost,
+.commentsection,
+.row mb-2 {
+  margin-top: 100px;
+  margin-bottom: 200px;
 }

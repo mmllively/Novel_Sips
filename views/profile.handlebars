@@ -1,121 +1,106 @@
-
 <head>
   <title>Novel Sips | My Profile</title>
 </head>
 
 {{!-- hero img --}}
-<img class="profileheroimg"
+{{!-- <img class="profileheroimg"
   src="https://images.pexels.com/photos/7470111/pexels-photo-7470111.jpeg?cs=srgb&dl=pexels-beyza-7470111.jpg&fm=jpg&_gl=1*1e5268e*_ga*ODY5NDU4MDMxLjE2NjgzNjU0MTY.*_ga_8JE65Q40S6*MTY2ODM3MjE3Ny4yLjAuMTY2ODM3MjE3Ny4wLjAuMA..">
+--}}
 
-<section class="profilecontainer">
+<section class="profilecontainer" align="center">
   {{!-- subtitle and paragraph --}}
   <h2 class="profilesubtitle">Welcome to your Book Shelf!</h2>
 
   {{!-- get books search input and button --}}
-  <div class="inputplacement" align="center">
+  <div class="profileinputplacement" align="center">
+    <p class="profilepgsearch">Search for a book recommendation:</p>
     <input class="getbooksinput" id="input" placeholder="Enter a book title...">
     <button class="getbooks" id="searchBtn">Search</button>
+    {{!-- <card class="booksoutput">
+      <div class="output" id="output"></div>
+    </card> --}}
+  </div>
 
-    <div class="favoritescontainer">
-      <h3 class="favesectiontitle">Favorite Books and Drinks</h3>
 
-      {{!-- fave book title input field --}}
-      <form class="form new-project-form">
-        {{!-- book title label --}}
-        <div class="faveinputtitle">
-          <label class="favebookname" for="post-name">Book Title:</label>
-        </div>
-        {{!-- title search bar --}}
-        <div class="faveforms">
-          <input class="faveform-input" placeholder="Enter a book title" type="text" id="post-name" name="post-name" />
-        </div>
-        {{!-- drink name label --}}
+  <div class="favoritescontainer" align="center">
+    <h3 class="favesectiontitle">Create a comment for you favorite recommendations.</h3>
 
-        <div class="faveinputtitle">
-          <label class="favedrinkname" for="project-desc">Drink Name:</label>
+
+    <section>
+      <form class="form new-book-form">
+
+        <div class="form-group">
+          <div class="content-label"><label for="book-description" class="contentlabel">My comments:</label></div>
+          <input type="text" class="favecomment-form-input" id="content-description" name="book-description"
+            placeholder="This read was fire with hot chocolate!">
+
         </div>
-        {{!-- title search bar --}}
-        <div>
-          <input class="faveform-input" placeholder="Enter a drink name" id="project-desc" name="project-desc"></input>
-        </div>
-        {{!-- add to favorites button --}}
-        <div class="favebtncontainer">
-          <button type="submit" class="favoritebtn">Add to favorites!</button>
+        <div class="form-group">
+          <button type="submit" class="createbtn" id="contentBtn">Create</button>
         </div>
 
       </form>
+    </section>
 
-    </div>
   </div>
-</section>
 
-{{#if posts.length}}
-<div class="col-md-6 post-list">
-  <h3>Current Blog Posts:</h3>
+  {{!-- comment card which is not not showing --}}
+  <section class="profilecontainer">
 
-  {{#each posts as |post|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h4><a href="/all-posts/{{post.author}}">{{post.title}}</a></h4>
+    <div class="comment-card">
+      {{#each comments as |comment|}}
+      <p class="commentPost">{{comment.content}}</p>
+      {{/each}}
     </div>
-    <button class="btn btn-sm btn-danger"><a href="/edit/{{post.id}}">EDIT</a></button>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" id="data-id {{post.id}}">DELETE</button>
+  </section>
+
+  {{#if comments.length}}
+  <div class="commentsection">
+    {{#each comments as |comment|}}
+
+    <div class="row mb-2">
+
+      <div class="col-md-8">
+        <h4>{{comment.content}}</h4>
+      </div>
+
+      <div>
+        <button id="edit-btn" class="btn btn-sm btn-danger">
+          <a href="/api/comments/{{comment.id}}">EDIT</a></button>
+      </div>
+
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" id="deleteBtn {{comment.id}}">
+          DELETE</button>
+      </div>
+
     </div>
+    {{/each}}
   </div>
-  {{/each}}
-</div>
-{{/if}}
-</div>
+  {{/if}}
 
-
-<script src="/js/profile.js"></script>
-<script src="/js/index.js"></script>
-
-
-
-
-
-
-
-{{#if books.length}}
-<div class="col-md-6 post-list">
-  {{#each book as |book|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h4>{{book.title}}</h4>
-    </div>
-    <button class="btn btn-sm btn-danger"><a href="/edit/{{book.id}}">EDIT</a></button>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" id="data-id {{book.id}}">DELETE</button>
-    </div>
-  </div>
-  {{/each}}
-</div>
-{{/if}}
-</div>
 
 
 
 
   {{#if logged_in}}
   <section class="flex-row justify-center">
-   <p >{{drink.name}}</p>
-   <p >{{drink.description}}</p>
-   {{!-- <button class="getdrinks" id="drinkBtn">Drink Generator</button> --}}
+    <p>{{drink.name}}</p>
+    <p>{{drink.description}}</p>
+    {{!-- <button class="getdrinks" id="drinkBtn">Drink Generator</button> --}}
   </section>
+
+  <!-- Otherwise, provide a link to login -->
+  {{else}}
+  <a href="/login">You must login first to view this page.</a>
+  {{/if}}
+
 </section>
 
-<!-- Otherwise, provide a link to login -->
-{{else}}
-<a href="/login">You must login first to view this page</a>
-{{/if}}
+</body>
 
- 
-
-{{!-- <script src="/js/newBook.js"></script> --}}
-<script src = "/js/index.js"></script>
-
-
-
-
+{{!--
+<script src="/js/newBook.js"></script> --}}
+<script src="/js/index.js"></script>
+<script src="/js/comment.js"></script>
+<script src="/js/edit.js"></script>
