@@ -659,15 +659,16 @@ header,
 
 /* container that contains carousel */
 .drinkscontainer {
-  margin-top: -247px;
+  margin-top: 80px;
   border-radius: 15px 15px;
 }
 
 /* container with the carousel */
 .carouselcontainer {
-  width: 50%;
+  width: 70%;
   height: 200px;
-  margin-left: 47%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding-bottom: 40px;
 }
 
@@ -691,7 +692,7 @@ header,
 /* drink title in carousel */
 .carouseldrinktitle {
   font-family: dancing script;
-  font-size: 26px;
+  font-size: 36px;
 }
 
 /* caption under carousel img */
