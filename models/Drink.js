@@ -37,10 +37,14 @@ Drink.init(
         model: 'user',
         key: 'id',
       },
+      
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
+  },
+  {
 
-},
-{
     sequelize,
     timestamps: false,
     freezeTableName: true,
