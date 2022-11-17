@@ -26,20 +26,24 @@
 
         {{!-- nav bar links --}}
         <nav class="navbarlinks" align="right">
-          
+
           <li><a href="/">Home</a></li>
           <li><a href="drinks">Drinks</a></li>
           <li><a href="/about-us">About Us</a></li>
           <li><a href="/contact-us">Contact Us</a></li>
           <li><a href="/profile">My BookShelf</a></li>
-          
+
         </nav>
+
+        <div class="login-navbar-btn">
+          <button class="loginhomebtn"><a href="/login">Log In</a></button>
+        </div>
 
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
-      
-        <div class="logoutBtn"><button class= 'logout' id="logout">Logout</button></div>
-        
+
+        <div class="logoutBtn"><button class="logout" id="logout">Logout</button></div>
+
 
         <!-- logout link here -->
         {{else}}
@@ -47,7 +51,7 @@
         {{/if}}
 
       </ul>
-    
+
 
   </header>
 
@@ -72,4 +76,3 @@
 
 
 </html>
-

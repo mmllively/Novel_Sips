@@ -1,5 +1,3 @@
-
-
 * {
   margin: 0;
   padding: 0;
@@ -44,8 +42,8 @@ header {
 .navbarlinks {
   margin-top: -36px;
   /* padding-right: 8%; */
-  width:92%;
-  
+  width: 93.5%;
+
 }
 
 /* styling for nav bar links */
@@ -280,13 +278,13 @@ footer {
 /* button styling */
 .login,
 .signup,
-
 .getbooks,
 .login-btn,
 .signupbtn,
 .submitbtn,
 .favoritebtn,
-#logout {
+#logout,
+.loginhomebtn {
   background-color: rgb(222, 94, 47);
   color: #dfdad2;
   font-size: 14px;
@@ -295,15 +293,25 @@ footer {
   padding: 7px 7px;
   border: 1px solid #dfdad2;
 }
-.logoutBtn{
-  padding-left: 93%;
-  margin-top: -3%;
+
+/* log out button in nav bar if logged in */
+.logoutBtn {
+  padding-left: 94%;
+  margin-top: -2.75%;
 }
+
+/* log in button in nav bar if not logged in */
+.login-navbar-btn {
+  padding-left: 94%;
+  margin-top: -2.5%;
+}
+
 /* button styling link */
 .login a,
 .signup a,
 .bookshelf a,
-#logout {
+#logout,
+.loginhomebtn a {
   color: #dfdad2;
   text-decoration: none;
 }
@@ -315,7 +323,8 @@ footer {
 .getbooks:hover,
 .login-btn:hover,
 .signupbtn:hover,
-#logout:hover {
+#logout:hover,
+.loginhomebtn a:hover {
   cursor: pointer;
   color: #dfdad2;
   text-decoration: none;
@@ -564,7 +573,7 @@ header,
 
 /* container with hero img and contact form on contact pg */
 .contactuscontainer {
-  margin-top: 70px;
+  margin-top: 90px;
   width: 50%;
 }
 
@@ -582,7 +591,7 @@ header,
 .contactusheroimg {
   height: 100%;
   width: 50%;
-  margin-top: -6px;
+  margin-top: -26px;
   margin-left: 50%;
   position: fixed;
 }
@@ -614,37 +623,68 @@ header,
 
 /* pg title on drinks page */
 .drinkstitle {
-  padding-top: 70px;
+  padding-top: 90px;
   font-family: dancing script;
   color: #5f351b;
   font-size: 40px;
+  width: 45%;
   text-align: center;
 }
 
 /* container on the left with title and search */
 .searchdrinktitle {
   width: 50%;
+  padding-top: 10px;
   color: #d1bea3;
+}
+
+.drinks-form-input {
+  padding: 5px 5px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 250px;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.drinksearchcontainer {
+  width: 35%;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: #5f351b;
+  border: 1px solid #d1bea3;
+  border-radius: 15px 15px;
 }
 
 /* container that contains carousel */
 .drinkscontainer {
-  margin-top: -150px;
-  background-color: #a2704f;
+  margin-top: -247px;
+  border-radius: 15px 15px;
 }
 
 /* container with the carousel */
 .carouselcontainer {
   width: 50%;
+  height: 200px;
   margin-left: 47%;
-  /* margin-right: 20%; */
   padding-bottom: 40px;
 }
 
 /* carousel img */
 .drinkimg {
-  height: 400px;
+  height: 300px;
   width: 100%;
+  border-radius: 15px 15px;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 400px;
+}
+
+.ourfavoritedrinkstitle {
+  font-size: 36px;
+  color: #d1bea3;
 }
 
 /* drink title in carousel */
@@ -704,8 +744,7 @@ header,
   font-weight: bold;
 }
 
-/* testing for card info for books/drinks */
-
+/* beginning of css for recommendations page */
 .recommendationcard {
   margin-top: 100px;
   width: 80%;
@@ -737,15 +776,15 @@ header,
 .reccard {
   padding-bottom: 15px;
   width: 70%;
-
-
 }
-.cardtitle{
+
+.cardtitle {
   font-family: Arial, Helvetica, sans-serif;
-  color:#dfdad2;
+  color: #dfdad2;
 }
 
-.drinkimg, .bookimg{
+.drinkimg,
+.bookimg {
   height: 100%;
   width: 100%;
   object-fit: fit;
