@@ -860,10 +860,6 @@ header,
 }
 
 /* none of these are showing */
-.comment-card,
-.commentPost,
-.commentsection,
-.row mb-2 {
+#edit-btn {
   margin-top: 100px;
-  margin-bottom: 200px;
 }
