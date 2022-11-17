@@ -672,7 +672,7 @@ header,
 
 /* carousel img */
 .drinkimg {
-  height: 300px;
+  height: 400px;
   width: 100%;
   border-radius: 15px 15px;
 }
@@ -745,8 +745,16 @@ header,
 }
 
 /* beginning of css for recommendations page */
-.recommendationcard {
+.recpgtitle {
+  font-family: dancing script;
+  font-size: 36px;
+  color: #5f351b;
+  padding-bottom: 20px;
   margin-top: 100px;
+  text-align: center;
+}
+
+.recommendationcard {
   width: 80%;
   color: #d1bea3;
   border: 1px solid #d1bea3;
@@ -754,46 +762,60 @@ header,
   border-radius: 15px 15px;
   margin-right: 10%;
   margin-left: 10%;
-  margin-bottom: 8px;
+  margin-bottom: 60px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bookreccard {
+  height: 100%;
+  width: 35%;
+  margin-right: 50%;
+  padding-bottom: 15px;
+}
+
+.drinkreccard {
+  margin-left: 50%;
+  margin-top: -37%;
+  width: 35%;
+  padding-bottom: 15px;
+  height: 100%;
 }
 
 .booktitle {
-  padding-top: 10px;
-  font-size: 28px;
-  color: #dfdad2;
+  font-family: dancing script;
+  font-size: 36px;
+  color: #d1bea3;
+  padding-bottom: 5px;
 }
 
 .bookauthor {
-  font-size: 24px;
+  font-size: 28px;
   padding-bottom: 15px;
-  color: #d1bea3;
-}
-
-.bookimg {
-  height: 150;
-}
-
-.reccard {
-  padding-bottom: 15px;
-  width: 70%;
-}
-
-.cardtitle {
-  font-family: Arial, Helvetica, sans-serif;
   color: #dfdad2;
 }
 
-.drinkimg,
+.drinktitlecard {
+  font-family: dancing script;
+  font-size: 28px;
+  color: #d1bea3;
+  padding-bottom: 5px;
+}
+
+.drinkdescriptioncard {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #dfdad2;
+  padding-bottom: 10px;
+}
+
+.drink-img,
 .bookimg {
   height: 100%;
   width: 100%;
-  object-fit: fit;
+  object-fit: fill;
   border-radius: 15px 15px;
   border: 1px solid #dfdad2;
-}
-
-.imgcontainer {
-  height: 300px;
-  width: 300px;
-  padding-bottom: 15px;
+  height: 250px;
+  width: 250px;
 }
