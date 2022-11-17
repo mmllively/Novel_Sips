@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Novel Sips</title>
-  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
   {{!-- google fonts stylesheet --}}
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing Script">
   {{!-- font awesome stylesheet --}}
@@ -25,21 +25,25 @@
       <ul>
 
         {{!-- nav bar links --}}
-        <section class="navbarlinks" align="right">
+        <nav class="navbarlinks" align="right">
+
           <li><a href="/">Home</a></li>
           <li><a href="drinks">Drinks</a></li>
           <li><a href="/about-us">About Us</a></li>
           <li><a href="/contact-us">Contact Us</a></li>
-        </section>
+          <li><a href="/profile">My BookShelf</a></li>
+
+        </nav>
+
+        <div class="login-navbar-btn">
+          <button class="loginhomebtn"><a href="/login">Log In</a></button>
+        </div>
 
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
 
-        {{!-- bookshelf and logout button --}}
-        <div class="bookshelf-logoutbtn">
-          <button class="bookshelf"><a href="/profile">My Book Shelf</a></button>
-          <button class="no-button" id="logout">Log Out</button>
-        </div>
+        <div class="logoutBtn"><button class="logout" id="logout">Logout</button></div>
+
 
         <!-- logout link here -->
         {{else}}
@@ -47,7 +51,7 @@
         {{/if}}
 
       </ul>
-    </nav>
+
 
   </header>
 
@@ -67,9 +71,8 @@
 
   <script src="/js/logout.js"></script>
   <script src="/js/login.js"></script>
- 
+  <script src="/js/main.js"></script>
 </body>
 
 
 </html>
-

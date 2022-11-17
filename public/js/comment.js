@@ -22,10 +22,12 @@ if (response.ok) {
 
 
 const commentEditHandler = async (e) =>{
-    e.preventDefault() 
+    e.preventDefault(); 
     const content = document.getElementById("edit-description").value
-    console.log(content);
-    const response = await fetch('/api/comments', {
+    const id = document.querySelector("h2").id;
+
+    if(content){
+    const response = await fetch(`/api/comments/${id}`, {
         method: 'PUT',
         body: JSON.stringify({
             content,
@@ -35,18 +37,19 @@ const commentEditHandler = async (e) =>{
         }
     });
     if (response.ok) {
-        document.location.reload();
+        document.location.replace('/profile');
     } else {
-        response.json()
+        alert('Failed to edit post.');
     }
-    
+}
     }
 
 
     const delButtonHandler = async (event) => {
+        
         if (event.target.hasAttribute('deleteBtn')) {
-          const id = event.target.getAttribute('deleteBtn');
-      
+          const id = event.target.getAttribute('data-delete');
+          console.log("Deleting", id) 
           const response = await fetch(`/api/comments/${id}`, {
             method: 'DELETE',
           });
@@ -76,13 +79,33 @@ const editButton = document.getElementById("edit-btn")
 editButton.addEventListener('click',commentEditHandler)
 
 
-delete button
-const deleteButton = document.getElementById("deleteBtn")
-deleteButton.addEventListener('click',delButtonHandler)
+//delete button
+const deleteButtons = document.getElementsByClassName("deleteBtn")
+
+ for(var i=0; i<deleteButtons.length; i++){
+    deleteButtons[i].addEventListener("click",async (event) => {
+        console.log('deleted')
+        if (event.target.classList.contains('deleteBtn')) {
+          const id = event.target.dataset.del;
+          console.log("Deleting", id) 
+          const response = await fetch(`/api/comments/${id}`, {
+            method: 'DELETE',
+          });
+      
+          if (response.ok) {
+            document.location.replace('/profile');
+          } else {
+            alert('Failed to delete project');
+          }
+        }
+      })
+
+ }
+ 
+
 
 // document
 //   .querySelector('#deleteBtn')
 //   .addEventListener('click', delButtonHandler);
 
 
-module.exports = router; 

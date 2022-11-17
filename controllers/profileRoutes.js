@@ -101,8 +101,9 @@ router.put('/:id', withAuth, async (req, res) => {
   }
 });
 
-// DELETE a Book
+// DELETE a Comment
 router.delete('/:id', withAuth, async (req, res) => {
+  console.log(req.params.id)
   try {
     const commentData = await Comment.destroy({
       where: {
@@ -110,6 +111,7 @@ router.delete('/:id', withAuth, async (req, res) => {
         user_id: req.session.user_id
       }
     });
+    res.status(200).json(commentData);
   } catch (err) {
     res.status(500).json(err);
   }
