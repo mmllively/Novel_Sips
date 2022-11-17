@@ -40,7 +40,8 @@ res.render('recommendation', {book:{
   title: books.data.docs[0].title, 
   author: books.data.docs[0].author_name[0],
   image: books.data.docs[0].isbn[1],
-}, drink, loggedIn: req.session.logged_in});
+  style: 'profile.css',
+}, drink, logged_in: req.session.logged_in});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -121,8 +122,10 @@ router.get('/', withAuth, async (req, res) => {
   //   const drinks = drinkData.map((drink) => drink.get({ plain: true }));
   //   const drink = drinks[Math.floor(Math.random()*drinks.length)]
    
-    
-    res.render('profile');
+    console.log(req.session.logged_in);
+    res.render('profile', {
+      logged_in: req.session.logged_in
+    })
    
   // }catch (err) {
   //   console.log(err);

@@ -26,6 +26,10 @@ Drink.init(
       allowNull: false,
       defaultValue: DataTypes.NOW,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
       
     user_id: {
       type: DataTypes.INTEGER,
@@ -34,8 +38,9 @@ Drink.init(
         key: 'id',
       },
     },
-  },
-  {
+
+},
+{
     sequelize,
     timestamps: false,
     freezeTableName: true,
