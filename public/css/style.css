@@ -279,7 +279,7 @@ footer {
 .signup,
 .bookshelf,
 .getbooks,
-.loginbtn,
+.login-btn,
 .signupbtn,
 .submitbtn,
 .favoritebtn,
@@ -307,7 +307,7 @@ footer {
 .signup a:hover,
 .bookshelf a:hover,
 .getbooks:hover,
-.loginbtn:hover,
+.login-btn:hover,
 .signupbtn:hover,
 #logout a:hover {
   cursor: pointer;
