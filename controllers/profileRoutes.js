@@ -1,17 +1,14 @@
-//requires a login 
-//Shows user saved books
+//Requires a login 
 
 const router = require('express').Router();
 const axios = require('axios');
-const { Drink, User, Book, Comment } = require('../models');
+const { Drink, Book, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 const getBooks = async function(title){
   const books = await axios.get("http://openlibrary.org/search.json?q="+ title)
   return books;
 }
-
-
 
 
 // GET a Books
@@ -29,12 +26,6 @@ console.log(books.data.docs[0].author_name[0]);
 console.log(books.data.docs[0].isbn[1]);
 console.log(drink);
 
-// const topFive = [];
-
-// for (let i = 0; i < 5; i++){
-//  topFive.push(books.data.docs[i]);
-// }
-// console.log(topFive);
 
 res.render('recommendation', {book:{
   title: books.data.docs[0].title, 
@@ -155,12 +146,6 @@ router.get('/', withAuth, async (req, res) => {
     res.status(500).json(err);
   }
 });
-
-
-
-
-
-
 
 module.exports = router;
  
