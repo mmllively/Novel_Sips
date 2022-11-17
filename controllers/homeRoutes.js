@@ -164,6 +164,10 @@ router.get('/contact-us', (req, res)=> {
   res.render('contact-us');
 })
 
+router.get('/drinks', (req, res) => {
+
+  res.render('drinks');
+})
 
 
 module.exports = router;
