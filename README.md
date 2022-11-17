@@ -15,7 +15,6 @@ You can also refer back to previous selections if you wanted to remember your fa
 * [Preview](#preview)
 * [Tech](#tech)
 * [Contributions](#contributions)
-* [Questions](#questions)
 * [Links](#links)
 
 
@@ -46,9 +45,6 @@ The "Four-Loopin Ladies":
  
  Special thanks to: Mateo-Wallace
 
-
-## Questions - Link to Instructional Video
-https://app.castify.com/view/57ed2567-d6ea-404e-b20f-142f3a68fa9a
 
 ## Links
  - [Deployed Website](https://young-gorge-24694.herokuapp.com/)
