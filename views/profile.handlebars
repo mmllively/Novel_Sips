@@ -10,10 +10,10 @@
     <div class="col-md-6">
       <h3>Favorite Books and Drinks</h3>
 
-      <div class="book-card">
-         {{#each books as |book|}}
-        <p>{{book.book_title}}</p>
-        <p>{{book.description}}</p>
+      <div class="comment-card">
+         {{#each comments as |comment|}}
+        <p class="commentPost">{{comment.content}}</p>
+       
         {{/each}}
       </div>
 
@@ -21,17 +21,14 @@
 
 <section>
 <form class="form new-book-form">
+ 
   <div class="form-group">
-    <label for="book-title">Book Title:</label>
-    <input class="form-input" type="text" id="book-title" name="book-title" placeholder="How the Grinch Stole Christmas" />
-  </div>
-  <div class="form-group">
-    <label for="book-description">Comments:</label>
-    <textarea class="form-input" id="book-description" name="book-description" placeholder="This was good with hot chocolate!"></textarea>
+    <label for="book-description">Content:</label>
+    <input type = "text" class="form-input" id="content-description" name="book-description" placeholder="This was good with hot chocolate!">
 
   </div>
   <div class="form-group">
-    <button type="submit" class="btn btn-primary">Create</button>
+    <button type="submit" class="btn btn-primary" id = "contentBtn">Create</button>
   </div>
 </form>
 </div>
@@ -56,16 +53,19 @@
 
 
 
-{{#if books.length}}
+{{#if comments.length}}
 <div class="col-md-6 post-list">
-  {{#each book as |book|}}
+  {{#each comments as |comment|}}
   <div class="row mb-2">
     <div class="col-md-8">
-      <h4>{{book.title}}</h4>
+      <h4>{{comment.content}}</h4>
     </div>
-    <button class="btn btn-sm btn-danger"><a href="/edit/{{book.id}}">EDIT</a></button>
+   
+  <div>
+    <button id = "edit-btn" class="btn btn-sm btn-danger"><a href="/api/comments/{{comment.id}}">EDIT</a></button>
+    </div>
     <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" id="data-id {{book.id}}">DELETE</button>
+      <button class="btn btn-sm btn-danger" id="deleteBtn {{comment.id}}">DELETE</button>
     </div>
   </div>
   {{/each}}
@@ -93,7 +93,7 @@
 
 {{!-- <script src="/js/newBook.js"></script> --}}
 <script src = "/js/index.js"></script>
-
+<script src = "/js/comment.js"></script>
 
 
 

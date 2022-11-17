@@ -24,16 +24,6 @@ Comment.init(
         model: "user"
       }
     },
-    drink_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        key: "id",
-
-        model: "drink"
-
-      }
-    }
   },
   {
     sequelize,

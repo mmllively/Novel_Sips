@@ -1,14 +1,13 @@
 const editHandler = async (event) => {
     event.preventDefault();
 
-    const title = document.querySelector('#book-title').value.trim();
-    const text = document.querySelector('#book-text').value.trim();
+    const content = document.querySelector('.commentPost').value.trim();
     const id = document.querySelector("h2").id;
 
-    if (title && description) {
-        const response = await fetch(`/api/bookshelf/${id}`, {
+    if (content) {
+        const response = await fetch(`/api/comments/${id}`, {
           method: 'PUT',
-          body: JSON.stringify({ title, description }),
+          body: JSON.stringify({ content }),
           headers: {
             'Content-Type': 'application/json',
           },
@@ -17,7 +16,7 @@ const editHandler = async (event) => {
     if (response.ok) {
             document.location.replace('/profile');
           } else {
-            alert('Failed to edit book.');
+            alert('Failed to edit comment.');
           }
         }
       };

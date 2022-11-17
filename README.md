@@ -28,7 +28,7 @@ node.js, mysql2, bcrypt, dotenv, express, express-handlebars, express-session, h
 
 ## Contributions
 The "Four-Loopin Ladies":
-Iia Wolak wolaki96), Karina Drummond (kdrummond528), Khris Soto (KSoto18) & Maggie Lively (mmllively)
+Iia Wolak wolaki96), Karina Drummond (kdrummond528), Khris Soto (KSoto18) & Maggie Lively (mmllively) with help from mateo-wallace
 
 
 ## Questions - Link to Instructional Video

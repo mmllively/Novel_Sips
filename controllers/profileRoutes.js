@@ -3,7 +3,7 @@
 
 const router = require('express').Router();
 const axios = require('axios');
-const { Drink, User, Book } = require('../models');
+const { Drink, User, Book, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 const getBooks = async function(title){
@@ -47,24 +47,40 @@ res.render('recommendation', {book:{
   }
 });
 
+//GET All Comments
+router.get('/comment', withAuth, async (req, res) => {
+  console.log("working")
+  try {
+    const commentData = await Comment.findAll();
 
-// ADD a Book
-// router.post('/', withAuth, async (req, res) => {
-//   try {
-//       const newBook = await Book.create({
-//           ...req.body,
-//           user_id: req.session.user_id
-//       });
-
-//       res.status(200).json(newBook);
-
-//   } catch (err) {
-//       res.status(400).json(err);
-//   }
-// });
+       const comments = commentData.map((comment) => comment.get({plain:true}));
+       console.log(comments);
+       res.render('profile', {comments, loggedIn: req.session.logged_in});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
-// UPDATE a Book
+
+
+// ADD a Comment
+router.post('/', withAuth, async (req, res) => {
+  try {
+      const newComment = await Comment.create({
+          ...req.body,
+          user_id: req.session.user_id
+      });
+
+      res.status(200).json(newComment);
+
+  } catch (err) {
+      res.status(400).json(err);
+  }
+});
+
+
+// UPDATE a Comment
 router.put('/:id', withAuth, async (req, res) => {
   try {
     const bookData = await Book.update(req.body, {
@@ -88,7 +104,7 @@ router.put('/:id', withAuth, async (req, res) => {
 // DELETE a Book
 router.delete('/:id', withAuth, async (req, res) => {
   try {
-    const bookData = await Book.destroy({
+    const commentData = await Comment.destroy({
       where: {
         id: req.params.id,
         user_id: req.session.user_id
@@ -102,6 +118,7 @@ router.delete('/:id', withAuth, async (req, res) => {
 //Get Drinks by ID
 router.get('/:id', async (req, res) => {
   try {
+    
     const drinkData = await Drink.findByPk(req.params.id);
 
     const drinks = drinkData.get({plain:true});
@@ -116,22 +133,27 @@ router.get('/:id', async (req, res) => {
 router.get('/', withAuth, async (req, res) => {
   // console.log('route hit')
   console.log(req.body)
-  // try {
-  //   const drinkData = await Drink.findAll();
+  try {
+    const commentData = await Comment.findAll();
 
-  //   const drinks = drinkData.map((drink) => drink.get({ plain: true }));
-  //   const drink = drinks[Math.floor(Math.random()*drinks.length)]
+    const comments = commentData.map((comment) => comment.get({plain:true}));
+    console.log(comments);
+   
+
+    const drinkData = await Drink.findAll();
+
+    const drinks = drinkData.map((drink) => drink.get({ plain: true }));
+    const drink = drinks[Math.floor(Math.random()*drinks.length)]
    
     console.log(req.session.logged_in);
-    res.render('profile', {
-      logged_in: req.session.logged_in
-    })
+    res.render('profile', {comments, loggedIn: req.session.logged_in});
    
-  // }catch (err) {
-  //   console.log(err);
-  //   res.status(500).json(err);
-  // }
+  }catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
 });
+
 
 
 
