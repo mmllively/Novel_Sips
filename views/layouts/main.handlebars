@@ -34,14 +34,11 @@
 
         </nav>
 
-        <div class="login-navbar-btn">
-          <button class="loginhomebtn"><a href="/login">Log In</a></button>
-        </div>
 
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
 
-        <div class="logoutBtn"><button class="logout" id="logout">Logout</button></div>
+        <div class="logoutBtn"><button class="logout">Logout</button></div>
 
 
         <!-- logout link here -->
@@ -67,9 +64,11 @@
   <footer>
     <p class="footerp">Created by the Four Loopin' Ladies ©</p>
   </footer>
-
+   
+   {{#if logged_in}}
   <script src="/js/logout.js"></script>
-  <script src="/js/login.js"></script>
+   {{/if}}
+  {{!-- <script src="/js/login.js"></script> --}}
   <script src="/js/main.js"></script>
 </body>
 

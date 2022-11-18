@@ -278,7 +278,7 @@ footer {
 .signupbtn,
 .submitbtn,
 .favoritebtn,
-#logout,
+.logout,
 .createbtn,
 .loginhomebtn {
   background-color: rgb(222, 94, 47);
@@ -306,7 +306,7 @@ footer {
 .login a,
 .signup a,
 .bookshelf a,
-#logout,
+.logout,
 .btn-danger a,
 .deleteBtn,
 .createbtn a,
@@ -324,7 +324,7 @@ footer {
 .signupbtn:hover,
 .btn-danger a:hover,
 .deleteBtn:hover,
-#logout:hover,
+.logout:hover,
 .createbtn a:hover,
 .loginhomebtn a:hover {
   cursor: pointer;
